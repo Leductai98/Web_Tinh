@@ -1,0 +1,24 @@
+{
+  "name": "web_tinh",
+  "version": "1.0.0",
+  "description": "Demos require a Mobiscroll trial or the licensed product.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leductai98/Web_Tinh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leductai98/Web_Tinh/issues"
+  },
+  "homepage": "https://github.com/Leductai98/Web_Tinh#readme",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}
