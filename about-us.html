@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Về chúng tôi - Tai</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/image/Group.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./library/bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/room_detail.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="./assets/css/room_detail_responsive.css" />
+    <link rel="stylesheet" href="./assets/css/about-us.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="row h-100">
+          <div class="col-lg-8 col-md-6 col-10 d-flex justify-content-start">
+            <a href="./index.html" class="icon d-lg-block">
+              <img src="./img/Group (4).png" alt="" />
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 d-none d-md-block d-flex justify-content-end"
+          >
+            <div class="row g-0">
+              <div class="col-5 d-flex align-items-center">
+                <div class="become-host" style="cursor: default">
+                  Trở thành chủ nhà
+                </div>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <div class="language d-flex gap-2 align-items-end">
+                  <div class="language-icon">
+                    <img src="./img/Group (5).png" alt="" />
+                  </div>
+                  <div class="language-des">VN</div>
+                </div>
+              </div>
+              <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="user-wrap">
+                  <div class="user">
+                    <div class="user-button">
+                      <svg
+                        width="16"
+                        height="12"
+                        viewBox="0 0 16 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33325 11H14.6666M1.33325 1H14.6666H1.33325ZM1.33325 6H7.99992H1.33325Z"
+                          stroke="#304659"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="user-icon">
+                      <svg
+                        width="32"
+                        height="31"
+                        viewBox="0 0 32 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                          fill="#304659"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="user__overlay"></div>
+                  <div class="user__menu">
+                    <a
+                      href="./sign-in.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-login"
+                      >Đăng nhập</a
+                    >
+                    <a
+                      href="./sign-up.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-signup"
+                      >Đăng ký</a
+                    >
+                    <div class="user__menu-become-host" style="cursor: default">
+                      Cho thuê chỗ ở
+                    </div>
+                    <a
+                      href="./help.html"
+                      style="text-decoration: none; color: inherit"
+                      class="user__menu-help"
+                      >Trợ giúp</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label class="col-2 d-md-none menu-icon" for="mobile-menu">
+            <img src="./img/list.svg" alt="" />
+          </label>
+          <input class="input-mobile-menu" type="checkbox" id="mobile-menu" />
+          <label class="overlay-mobile" for="mobile-menu"></label>
+          <div class="menu">
+            <label class="close-mobile-menu" for="mobile-menu"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </label>
+            <div class="avatar">
+              <img src="./img/Frame (7).png" alt="" />
+              <p>Khách</p>
+            </div>
+            <ul class="menu-list">
+              <li><a href="./sign-in.html" class="menu-item">Đăng nhập</a></li>
+              <li>
+                <a href="./sign-up.html" class="menu-item end-user">Đăng ký</a>
+              </li>
+              <li><a class="menu-item">Trở thành chủ nhà</a></li>
+              <li class="menu-item-languages">
+                Ngôn ngữ: <span>Tiếng Việt</span>
+              </li>
+              <li><a href="./help.html" class="menu-item">Trợ giúp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-banner-wrap">
+      <div class="banner-content">
+        Khám phá hàng ngàn lựa chọn tận hưởng cuộc sống với Tai
+      </div>
+      <div class="video-background-overlay"></div>
+      <div class="video-background">
+        <video
+          src="./assets/video/pexels-enrique-hoyos-3571264-3840x2160-30fps.mp4"
+          muted
+          loop
+          autoplay
+        ></video>
+      </div>
+    </div>
+    <div class="container">
+      <div class="about-content">
+        <div class="about-content-header">
+          <span>Tai</span> <br />
+          Sống đậm chất riêng
+        </div>
+        <div class="about-list">
+          <div class="row about-item">
+            <div class="col-12 col-md-5 order-1 order-md-0 or about-item-img">
+              <img src="./assets/image/about-1.webp" alt="" />
+            </div>
+            <div class="col-12 col-md-7 order-0 order-md-1 about-item-des">
+              <span>Tai</span> là ứng dụng du lịch và tiện ích sống hàng đầu
+              Đông Nam Á, chúng tôi giúp bạn khám phá các địa điểm mới một cách
+              thoải mái, phù hợp với bản thân. Không chỉ vậy, để giúp bạn thực
+              hiện nhiều ước vọng về phong cách sống của mình, chúng tôi còn
+              hoàn thiện các dịch vụ của mình với một loạt các điểm tham quan,
+              hoạt động địa phương cũng như các spa chăm sóc sức khỏe và sắc
+              đẹp. Vì vậy, bất kể lựa chọn lối sống của bạn là gì, bạn chỉ cần
+              một cú nhấp chuột!
+            </div>
+          </div>
+          <div class="row about-item">
+            <div class="col-12 col-md-7 about-item-des">
+              <span>Tai</span> tin rằng hạnh phúc có thể đến dưới nhiều hình
+              thức đối với những người khác nhau trong những thời điểm khác
+              nhau. Vì vậy, với uy tín của chúng tôi và kinh nghiệm hơn 10 năm,
+              chúng tôi hứa hẹn với bạn một loạt các lựa chọn phong phú để thắp
+              sáng trạng thái hạnh phúc của chính bạn. Cho dù bạn đang tìm kiếm
+              một trải nghiệm thú vị hay nghỉ ngơi trong khu nghỉ dưỡng 5 sao,
+              một ngày spa thư giãn hay một chuyến phiêu lưu ly kỳ, một chuyến
+              bay hạng nhất tiện lợi hay chuyến đi đường bộ thú vị, cho cả
+              chuyến đi trong nước và quốc tế, bạn đều có tất cả trong một ứng
+              dụng <span>Tai</span>. <br />
+              <br />
+              Với dịch vụ chăm sóc khách hàng 24/7 bằng các ngôn ngữ địa phương
+              cũng như hơn 30 phương thức thanh toán địa phương khác nhau,
+              <span>Tai</span> đã được tải xuống hơn 100 triệu lần, trở thành
+              ứng dụng du lịch và tiện ích sống phổ biến nhất ở khu vực Đông Nam
+              Á.
+              <br />
+              <br />
+              Bạn còn chờ gì nữa? Đặt một chuyến đi được lên kế hoạch chu đáo
+              hoặc một kỳ nghỉ được quyết định vào phút chót với chúng tôi. Với
+              tất cả các lựa chọn du lịch và phong cách sống độc đáo của bạn,
+              như mọi khi, <span>Tai</span> sẽ đồng hành cùng bạn.
+            </div>
+            <div class="col-12 col-md-5 about-item-img long">
+              <img src="./assets/image/about-2.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="./index.html" class="about-more">Khám Phá Thêm</a>
+    </div>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content--left">
+            <div class="footer__content--left--header">
+              Khám phá thế giới cùng với Tai!
+            </div>
+            <div class="footer__content--left--des">
+              Chúng tôi cung cấp các dịch vụ phù hợp cho mọi nhu cầu du lịch của
+              bạn. Chủ nhà của chúng tôi rất tuyệt vời, sẵn sàng đáp ứng kỳ nghỉ
+              của bạn khi bạn tận hưởng kỳ nghỉ của mình mà không phải lo lắng.
+            </div>
+            <div class="footer__content--left--icon">© 2023 Tai.</div>
+          </div>
+          <div class="footer__content--right">
+            <div class="footer__content--right--infor">
+              <a href="./about-us.html" class="infor__item">Về chúng tôi</a>
+
+              <a href="./help.html" class="infor__item">Trợ giúp</a>
+              <a href="./privacy.html" class="infor__item"
+                >Chính sách riêng tư</a
+              >
+              <label for="contact-input" class="infor__item">Liên hệ</label>
+            </div>
+            <div class="mail-des">Nhận thêm thông tin về chúng tôi</div>
+            <div class="footer__content--right--mail">
+              <form action="" style="display: flex">
+                <input
+                  type="email"
+                  placeholder="Nhập địa chỉ email của bạn"
+                /><button type="submit" style="cursor: pointer">
+                  Gửi <img src="./img/Frame (6).png" alt="" />
+                </button>
+              </form>
+            </div>
+            <div class="footer__content--right--icon">
+              <div class="footer__content--left--icon-onmobile">
+                © 2023 Tai.
+              </div>
+              <a href="https://twitter.com/home?lang=en" class="icon__item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#1D9BF0"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  /></svg
+              ></a>
+              <a href="https://www.facebook.com" class="icon__item"
+                ><img src="./assets/image/Facebook_f_logo_(2019).svg" alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com"
+                class="icon__item"
+                style="background-color: unset"
+                ><img src="./assets/image/Instagram_logo_2016.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <input type="checkbox" id="contact-input" />
+      <label for="contact-input" class="info-contact-overlay"></label>
+      <div class="info-contact-detail">
+        <label for="contact-input" class="cover-detail-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </label>
+        <div class="detail-wrap">
+          <div class="cover-detail-header-contact">
+            <div class="detail-header-icon-contact">
+              <img src="./img/Group (4).png" alt="" />
+            </div>
+            <div class="detail-header-text-contact">
+              Nếu quý khách có thắc mắc, xin vui lòng liên hệ chúng tôi theo
+              thông tin dưới đây:
+            </div>
+          </div>
+          <div class="cover-detail-list">
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Email:</div>
+              <a
+                href="mailto: leductai9898@gmail.com"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                leductai9898@gmail.com
+              </a>
+            </div>
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Hotline:</div>
+              <a
+                href="tel: 0776455910"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                0776455910
+              </a>
+            </div>
+            <div class="cover-detail-item active">
+              <div class="detail-item-header-contact">Địa chỉ</div>
+              <div class="detail-item-text-contact">
+                A1 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội
+                <div class="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.046139559176!2d105.8478321!3d21.002194!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac740ba3819f%3A0x2b5ef5b01461f9e7!2zU8OibiB24bqtbiDEkeG7mW5nIFRyxrDhu51uZyDEkOG6oWkgaOG7jWMgQsOhY2ggS2hvYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1680714956256!5m2!1svi!2s"
+                    width="800"
+                    height="600"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./library/bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/about-us.js"></script>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+/* Tablet and Mobile*/
+@media (max-width: 1023px) {
+  .hide-on-tablet-mobile {
+    display: none;
+  }
+  .nav {
+    height: fit-content;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+  }
+  .header {
+    background-image: unset;
+    height: auto;
+    margin-top: 10px;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__icon-tablet-mobile {
+    display: block;
+    width: 120px;
+  }
+  .nav__button {
+    margin-left: 0;
+    justify-content: center;
+    gap: 0;
+  }
+  .nav__button--host {
+    display: none;
+    color: var(--text-color);
+  }
+  .nav__button--languages {
+    margin-right: 10px;
+  }
+  .nav__button--languages--button {
+    display: none;
+  }
+  .on-tablet-mobile {
+    display: block;
+  }
+  .nav__button--languages--country {
+    color: var(--text-color);
+  }
+  .nav__button--user {
+    display: none;
+  }
+  .nav__button--user.on-tablet-mobile {
+    display: none;
+    border: 1px solid var(--text-color);
+  }
+  .nav__button--languages {
+    display: none;
+  }
+  .header__des,
+  .header__picture,
+  .header__search {
+    display: none;
+  }
+
+  .header__search.on-tablet-mobile {
+    display: flex;
+    position: unset;
+  }
+  .input-location-mobile {
+    border: none;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    color: var(--text-color);
+    position: relative;
+    z-index: 10;
+    text-overflow: ellipsis;
+  }
+  .input-location-mobile::placeholder {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .input-mobile {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    text-overflow: ellipsis;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+
+  .input-mobile::placeholder {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 14px;
+  }
+  .header__search--button {
+    display: none;
+  }
+  .header__search {
+    flex: 1;
+    height: unset;
+    gap: 0;
+    border-radius: 30px;
+    border: 1px solid #6666664d;
+  }
+  .header__search--location {
+  }
+  .header__search--day-on-tablet {
+    flex: 1;
+    position: relative;
+  }
+  .header__search--location--des,
+  .header__search--day--des,
+  .header__search--people--des {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .header__search--location--input {
+    display: none;
+  }
+  .header__search--day--placeholder {
+    display: none;
+  }
+  .header__search--people--placeholder {
+    display: none;
+  }
+  .header__search--location--des--icon,
+  .header__search--day--des--icon,
+  .header__search--people--des--icon {
+    display: none;
+  }
+  .header__search--location {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .header__search--day-on-tablet,
+  .header__search--people {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__search--location::before {
+    content: "";
+    height: 30px;
+    border: 0.5px solid #aca9a971;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    z-index: 2;
+  }
+  .header__search--day-on-tablet::before {
+    content: "";
+    height: 30px;
+    border: 0.5px solid #aca9a971;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menu-icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: scale 0.2s linear;
+  }
+  .menu-icon:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
+  .input-mobile-menu:checked ~ .menu {
+    transform: translateX(0);
+  }
+  .input-mobile-menu:checked ~ .overlay-mobile {
+    display: block !important;
+  }
+  .menu-item-languages {
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+  }
+  .filter {
+    margin-top: 80px;
+  }
+  .booking__room--filter {
+    width: 80px;
+    height: 40px;
+  }
+  .booking__room--filter p {
+    font-size: 15px;
+  }
+  .btn__moreroom button {
+    font-size: 15px;
+  }
+  .footer__content--left {
+    width: 35%;
+  }
+  .footer__content--right {
+    width: 65%;
+  }
+  .footer__content--left--icon-onmobile {
+    display: flex;
+  }
+  .footer__content--left--icon {
+    display: none;
+  }
+  /* video-background */
+  .image-background {
+    display: none;
+  }
+  .header::before {
+    display: none;
+  }
+  /*location-menu-mobile */
+
+  .location-item-text {
+    font-size: 14px;
+  }
+
+  .booking-filter-menu-wrap {
+    top: 5%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+/*Tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .nav {
+    width: 100%;
+  }
+  .header__search--day-on-tablet {
+  }
+  .nav__icon-tablet-mobile {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    left: 0;
+    width: 100%;
+  }
+  .filter__button--left,
+  .filter__button--right {
+    display: none;
+  }
+  .booking__banner--header {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .booking__banner--des {
+    display: none;
+  }
+  .booking__banner--sign-up {
+    justify-content: center;
+  }
+  .footer__content--left {
+    display: none;
+  }
+  .footer__content--right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .footer__content--right--icon {
+    justify-content: center;
+  }
+  .footer__content--right--mail {
+    margin-top: 30px;
+  }
+  .mail-des {
+    text-align: center;
+    margin-bottom: -60px;
+  }
+  .info-contact-detail {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .cover-detail-list {
+    flex-direction: column;
+  }
+  .cover-detail-item {
+    width: 100%;
+  }
+  iframe {
+    max-width: 100%;
+  }
+}
+
+/*flatpickr*/
+.flatpickr-months {
+  background: var(--background-color);
+}
+.flatpickr-months .flatpickr-month {
+  background: var(--background-color);
+}
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  background-color: var(--background-color);
+}
+.flatpickr-weekdays {
+  background: var(--background-color);
+}
+span.flatpickr-weekday {
+  background: var(--background-color);
+  color: white;
+}
+
+
+@media (max-width:480px){
+  .guest-menu{
+    left: -150px;
+  }
+}

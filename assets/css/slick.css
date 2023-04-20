@@ -1,0 +1,59 @@
+.slick-prev.slick-arrow {
+  color: #304659;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: white !important;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px 2px white;
+  transition: all 0.3s ease;
+  border: 1px solid #9fa3b4;
+  cursor: pointer;
+}
+
+.slick-next.slick-arrow {
+  color: #304659;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: white !important;
+  border: none;
+  border-radius: 50%;
+  box-shadow: -1px 1px 10px 2px white;
+  border: 1px solid #9fa3b4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slick-prev.slick-arrow svg,
+.slick-next.slick-arrow svg {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.slick-initialized .slick-slide {
+  height: 80px;
+  display: flex;
+}

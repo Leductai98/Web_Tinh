@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/image/Group.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./library/bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css"
+    />
+    <link rel="stylesheet" href="./assets/css/room_detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/swiper.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="./assets/css/room_detail_responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="row h-100">
+          <div class="col-lg-8 col-md-6 col-10 d-flex justify-content-start">
+            <a href="./index.html" class="icon d-lg-block">
+              <img src="./img/Group (4).png" alt="" />
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 d-none d-md-block d-flex justify-content-end"
+          >
+            <div class="row g-0">
+              <div class="col-5 d-flex align-items-center">
+                <div class="become-host" style="cursor: default">
+                  Trở thành chủ nhà
+                </div>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <div class="language d-flex gap-2 align-items-end">
+                  <div class="language-icon">
+                    <img src="./img/Group (5).png" alt="" />
+                  </div>
+                  <div class="language-des">VN</div>
+                </div>
+              </div>
+              <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="user-wrap">
+                  <div class="user">
+                    <div class="user-button">
+                      <svg
+                        width="16"
+                        height="12"
+                        viewBox="0 0 16 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33325 11H14.6666M1.33325 1H14.6666H1.33325ZM1.33325 6H7.99992H1.33325Z"
+                          stroke="#304659"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="user-icon">
+                      <svg
+                        width="32"
+                        height="31"
+                        viewBox="0 0 32 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                          fill="#304659"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="user__overlay"></div>
+                  <div class="user__menu">
+                    <a
+                      href="./sign-in.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-login"
+                      >Đăng nhập</a
+                    >
+                    <a
+                      href="./sign-up.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-signup"
+                      >Đăng ký</a
+                    >
+                    <div class="user__menu-become-host" style="cursor: default">
+                      Cho thuê chỗ ở
+                    </div>
+                    <a
+                      href="./help.html"
+                      style="text-decoration: none; color: inherit"
+                      class="user__menu-help"
+                      >Trợ giúp</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label class="col-2 d-md-none menu-icon" for="mobile-menu">
+            <img src="./img/list.svg" alt="" />
+          </label>
+          <input class="input-mobile-menu" type="checkbox" id="mobile-menu" />
+          <label class="overlay-mobile" for="mobile-menu"></label>
+          <div class="menu">
+            <label class="close-mobile-menu" for="mobile-menu"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </label>
+            <div class="avatar">
+              <img src="./img/Frame (7).png" alt="" />
+              <p>Khách</p>
+            </div>
+            <ul class="menu-list">
+              <li><a href="./sign-in.html" class="menu-item">Đăng nhập</a></li>
+              <li>
+                <a href="./sign-up.html" class="menu-item end-user">Đăng ký</a>
+              </li>
+              <li><a href="" class="menu-item">Trở thành chủ nhà</a></li>
+              <li class="menu-item-languages">
+                Ngôn ngữ: <span>Tiếng Việt</span>
+              </li>
+              <li><a href="./help.html" class="menu-item">Trợ giúp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="room-wrap">
+        <div class="room__des-header">
+          <div class="header-name">
+            <p>Bungalow</p>
+          </div>
+          <div class="header-info">
+            <div class="row g-0 align-items-end">
+              <div
+                class="col-10 col-md-2 d-flex align-items-end justify-content-start"
+              >
+                <div
+                  class="rating d-flex gap-2 align-items-end justify-content-start"
+                >
+                  <div class="rating-icon d-flex align-items-center">
+                    <img src="./assets/image/Star.jpg" alt="" />
+                  </div>
+                  <div class="rating-text">4.60 (280)</div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 d-none d-md-block d-flex align-items-end justify-content-start"
+              >
+                <div class="info-status">
+                  <span class="house">Toàn bộ nhà |</span>
+                  <span class="location">Đà Nẵng</span>
+                </div>
+              </div>
+              <div
+                class="col-1 col-md-2 d-flex align-items-end justify-content-end"
+              >
+                <div class="share">
+                  <div class="share-icon">
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      style="
+                        display: block;
+                        fill: none;
+                        height: 16px;
+                        width: 16px;
+                        stroke: currentcolor;
+                        stroke-width: 2;
+                        overflow: visible;
+                      "
+                    >
+                      <g fill="none">
+                        <path
+                          d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"
+                        ></path>
+                        <path d="M16 3v23V3z"></path>
+                        <path
+                          d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="share-text d-none d-md-block">Chia sẻ</div>
+                </div>
+              </div>
+              <div
+                class="col-1 col-md-2 d-flex align-items-end justify-content-end"
+              >
+                <div class="save">
+                  <div class="save-icon" style="color: none">
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      style="
+                        display: block;
+                        fill: none;
+                        height: 16px;
+                        width: 16px;
+                        stroke: currentcolor;
+                        stroke-width: 2;
+                        overflow: visible;
+                      "
+                    >
+                      <path
+                        d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="save-text d-none d-md-block">Lưu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room__picture">
+          <input type="checkbox" id="picture-list" />
+          <div class="room__picture-list-wrap">
+            <label for="picture-list" class="cover-detail-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="white"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </label>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/city/pexels-leeloo-thefirst-5227440.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/city/pexels-pixabay-258154.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide" id="picture-1">
+                  <img
+                    src="./assets/image/nature/pexels-eberhard-grossgasteiger-572897.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/nature/pexels-frans-van-heerden-624015.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/animals/pexels-leon-woods-598752.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/animals/pexels-lisa-fotios-735182.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/image/city/pexels-spencer-davis-4356144.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="row h-100 g-1">
+            <div for="picture-list" class="col-12 col-md-6 picture-right">
+              <label for="picture-list" class="picture-big">
+                <img src="./img/room1/img1.png" alt="" />
+              </label>
+            </div>
+            <div class="col-6 d-none d-md-block picture-left">
+              <div class="row g-1">
+                <div class="col-lg-6 d-none d-lg-block">
+                  <label for="picture-list" class="picture-small">
+                    <img src="./img/room1/img2.png" alt="" />
+                  </label>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                  <label
+                    for="picture-list"
+                    class="picture-small border-picture-top"
+                  >
+                    <img src="./img/room1/img3.png" alt="" />
+                  </label>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                  <label for="picture-list" class="picture-small">
+                    <img src="./img/room1/img4.png" alt="" />
+                  </label>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                  <label
+                    for="picture-list"
+                    class="picture-small border-picture-bot"
+                  >
+                    <img src="./img/room1/img5.png" alt="" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room__info">
+          <div class="row justify-content-between">
+            <div class="col-12 col-md-7">
+              <div class="row">
+                <div class="col-12">
+                  <div class="info-name">
+                    <div class="name"><h5>Bungalow</h5></div>
+                    <div class="name-info">
+                      <span class="name-info-guest">5 khách</span> |
+                      <span class="name-info-bedroom">1 ngủ</span> |
+                      <span class="name-info-bed">2 giường</span> |
+                      <span class="name-info-bathroom">1 phòng tắm</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="info-feature-list">
+                    <div class="info-feature d-flex gap-4">
+                      <div class="feature-icon">
+                        <img src="./assets/image/Frame (11).png" alt="" />
+                      </div>
+                      <div class="feature-text">
+                        <div class="feature-text-header">Tự nhận phòng</div>
+                        <div class="feature-text-des">
+                          Tự nhận phòng với hộp khóa an toàn
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-feature d-flex gap-4">
+                      <div class="feature-icon">
+                        <img src="./assets/image/Frame (11).png" alt="" />
+                      </div>
+                      <div class="feature-text">
+                        <div class="feature-text-header">Tự nhận phòng</div>
+                        <div class="feature-text-des">
+                          Tự nhận phòng với hộp khóa an toàn
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-feature d-flex gap-4 jus">
+                      <div class="feature-icon">
+                        <img src="./assets/image/Frame (11).png" alt="" />
+                      </div>
+                      <div class="feature-text">
+                        <div class="feature-text-header">Tự nhận phòng</div>
+                        <div class="feature-text-des">
+                          Tự nhận phòng với hộp khóa an toàn
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="info-cover">
+                    <div class="info-cover-header"><span>Tai</span>cover</div>
+                    <div class="info-cover-des">
+                      Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp
+                      Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác
+                      và những vấn đề khác như sự cố trong quá trình nhận phòng.
+                    </div>
+                    <label for="cover-input" class="info-cover-more"
+                      >Tìm hiểu thêm</label
+                    >
+                  </div>
+                  <input type="checkbox" id="cover-input" />
+                  <label for="cover-input" class="info-cover-overlay"></label>
+                  <div class="info-cover-detail">
+                    <label for="cover-input" class="cover-detail-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </label>
+                    <div class="detail-wrap">
+                      <div class="cover-detail-header">
+                        <div class="detail-header-icon">
+                          <span>Tai</span>cover
+                        </div>
+                        <div class="detail-header-text">
+                          <span>Tai</span>Cover là chương trình bảo vệ toàn
+                          diện, được áp dụng miễn phí với mọi đặt phòng.
+                        </div>
+                      </div>
+                      <div class="cover-detail-list">
+                        <div class="cover-detail-item">
+                          <div class="detail-item-header">
+                            Bảo đảm bảo vệ đặt phòng
+                          </div>
+                          <div class="detail-item-text">
+                            Trong trường hợp hãn hữu khi Chủ nhà cần hủy đặt
+                            phòng của bạn trong vòng 30 ngày trước ngày nhận
+                            phòng, chúng tôi sẽ tìm cho bạn một chỗ ở tương tự
+                            hoặc tốt hơn, hoặc sẽ hoàn tiền cho bạn.
+                          </div>
+                        </div>
+                        <div class="cover-detail-item">
+                          <div class="detail-item-header">
+                            Bảo đảm nhận phòng
+                          </div>
+                          <div class="detail-item-text">
+                            Nếu bạn không thể nhận phòng và Chủ nhà không thể
+                            giải quyết vấn đề này, chúng tôi sẽ tìm cho bạn một
+                            chỗ ở tương tự hoặc tốt hơn có thời gian ở tương
+                            đương, hoặc chúng tôi sẽ hoàn tiền cho bạn.
+                          </div>
+                        </div>
+                        <div class="cover-detail-item">
+                          <div class="detail-item-header">
+                            Bảo đảm chi phí tương xứng
+                          </div>
+                          <div class="detail-item-text">
+                            Trong thời gian ở, nếu bạn nhận thấy chỗ ở không
+                            đúng như quảng cáo, ví dụ như tủ lạnh ngừng hoạt
+                            động và Chủ nhà không thể dễ dàng khắc phục vấn đề
+                            này, hoặc số phòng ngủ ít hơn so với thông tin trên
+                            mục cho thuê, thì bạn sẽ có 3 ngày để báo cáo vấn
+                            đề. Khi đó, chúng tôi sẽ tìm cho bạn một chỗ ở tương
+                            tự hoặc tốt hơn, hoặc chúng tôi sẽ hoàn tiền cho
+                            bạn.
+                          </div>
+                        </div>
+                        <div class="cover-detail-item">
+                          <div class="detail-item-header">
+                            Đường dây an toàn 24 giờ
+                          </div>
+                          <div class="detail-item-text">
+                            Nếu cảm thấy không an toàn, bạn sẽ được ưu tiên liên
+                            hệ với nhân viên hỗ trợ an toàn được đào tạo đặc
+                            biệt của chúng tôi, bất kể ngày đêm.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="info-sleep">
+                    <div class="info-sleep-header">Nơi bạn ngủ nghỉ</div>
+                    <div class="info-sleep-list">
+                      <div class="row gy-4 gx-4">
+                        <div class="col-4">
+                          <div class="sleep-item">
+                            <div class="sleep-item-icon">
+                              <img src="./assets/image/Group 1030.png" alt="" />
+                            </div>
+                            <div class="sleep-item-name">Phòng ngủ</div>
+                            <div class="sleep-item-des">2 giường đơn</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="sleep-item">
+                            <div class="sleep-item-icon">
+                              <img src="./assets/image/Group 1030.png" alt="" />
+                            </div>
+                            <div class="sleep-item-name">Phòng ngủ</div>
+                            <div class="sleep-item-des">2 giường đơn</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="sleep-item">
+                            <div class="sleep-item-icon">
+                              <img src="./assets/image/Group 1030.png" alt="" />
+                            </div>
+                            <div class="sleep-item-name">Phòng ngủ</div>
+                            <div class="sleep-item-des">2 giường đơn</div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="sleep-item">
+                            <div class="sleep-item-icon">
+                              <img src="./assets/image/Group 1030.png" alt="" />
+                            </div>
+                            <div class="sleep-item-name">Phòng ngủ</div>
+                            <div class="sleep-item-des">2 giường đơn</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="info-utinity">
+                    <div class="utinity-des">Nơi này có những gì cho bạn</div>
+                    <div class="utinity-list">
+                      <div class="row gy-3 justify-content-between">
+                        <div class="col-6">
+                          <div class="utinity-item">
+                            <div class="utinity-item-icon">
+                              <img src="./assets/image/Frame (12).png" alt="" />
+                            </div>
+                            <div class="utinity-item-des">
+                              Lối ra bãi biển - Hướng biển
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="utinity-item">
+                            <div class="utinity-item-icon">
+                              <img src="./assets/image/Frame (12).png" alt="" />
+                            </div>
+                            <div class="utinity-item-des">
+                              Lối ra bãi biển - Hướng biển
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="utinity-item">
+                            <div class="utinity-item-icon">
+                              <img src="./assets/image/Frame (12).png" alt="" />
+                            </div>
+                            <div class="utinity-item-des">
+                              Lối ra bãi biển - Hướng biển
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="utinity-item">
+                            <div class="utinity-item-icon">
+                              <img src="./assets/image/Frame (12).png" alt="" />
+                            </div>
+                            <div class="utinity-item-des">
+                              Lối ra bãi biển - Hướng biển
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="utinity-item">
+                            <div class="utinity-item-icon">
+                              <img src="./assets/image/Frame (12).png" alt="" />
+                            </div>
+                            <div class="utinity-item-des">
+                              Lối ra bãi biển - Hướng biển
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="utinity-item">
+                            <div class="utinity-item-icon">
+                              <img src="./assets/image/Frame (12).png" alt="" />
+                            </div>
+                            <div class="utinity-item-des">
+                              Lối ra bãi biển - Hướng biển
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="utinity-more d-none">
+                      Hiển thị tất cả 36 tiện nghi
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="info-cancel">
+                    <div class="cancel-header">Chính sách hủy</div>
+                    <div class="cancel-des">
+                      Bạn không được hoàn tiền nếu hủy phòng này. <br />
+                      Hãy đọc toàn bộ chính sách hủy của Chủ nhà.
+                    </div>
+                    <label for="cancel-input" class="cancel-more">
+                      <span class="text">Hiển thị thêm</span
+                      ><img src="./assets/image/Frame (13).png" alt="" />
+                    </label>
+                  </div>
+                  <input type="checkbox" id="cancel-input" />
+                  <label for="cancel-input" class="info-cover-overlay"></label>
+                  <div class="info-cancel-detail">
+                    <label for="cancel-input" class="cover-detail-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </label>
+                    <div class="detail-wrap">
+                      <div
+                        class="cover-detail-header"
+                        style="border-bottom: none"
+                      >
+                        <div class="detail-header-text">
+                          Trước khi bạn đặt phòng/đặt chỗ, hãy đảm bảo chính
+                          sách hủy của Chủ nhà/Người tổ chức này phù hợp với
+                          bạn. Xin lưu ý rằng chính sách Trường hợp bất khả
+                          kháng của
+                          <span>Tai</span> không áp dụng cho các trường hợp hủy
+                          vì ốm bệnh hoặc gián đoạn đi lại do dịch COVID-19.
+                        </div>
+                      </div>
+                      <div class="cover-detail-list">
+                        <div class="cover-detail-item w-100">
+                          <div class="detail-item-header">
+                            Hủy muộn nhất vào ngày
+                          </div>
+                          <div class="detail-item-content">
+                            <div class="detail-item-date">2023/04/07</div>
+                            <div class="detail-item-text">
+                              Hoàn tiền đầy đủ: Được hoàn lại 100% số tiền bạn
+                              đã thanh toán.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="info-rules">
+                    <div class="rules-des">Nội quy nhà</div>
+                    <div class="rules-list">
+                      <div class="rules-item">Nhận phòng sau 11:00</div>
+                      <div class="rules-item">Trả phòng trước 12:00</div>
+                      <div class="rules-item">Tối đa 4 khách</div>
+                    </div>
+                    <label for="rules-input" class="rules-more">
+                      <span>Hiển thị thêm</span
+                      ><img src="./assets/image/Frame (13).png" alt="" />
+                    </label>
+                    <input type="checkbox" id="rules-input" />
+                    <label for="rules-input" class="info-cover-overlay"></label>
+                    <div class="info-rules-detail">
+                      <label for="rules-input" class="cover-detail-close">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          fill="currentColor"
+                          class="bi bi-x"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </label>
+                      <div class="detail-wrap">
+                        <div
+                          class="cover-detail-header"
+                          style="border-bottom: none"
+                        >
+                          <div class="detail-header-icon">Nội quy nhà</div>
+                          <div class="detail-header-text">
+                            Hãy thực hiện theo các quy tắc này để là một vị
+                            khách có ý thức và tránh mọi sự cố trong thời gian
+                            ở.
+                          </div>
+                        </div>
+                        <div class="cover-detail-list">
+                          <div class="cover-detail-item w-100">
+                            <div class="detail-item-header">
+                              Khách được ở lại
+                            </div>
+                            <div class="detail-item-content">
+                              <div class="content-wrap">
+                                <div class="content-icon">
+                                  <svg
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
+                                    style="
+                                      display: block;
+                                      height: 24px;
+                                      width: 24px;
+                                      fill: currentcolor;
+                                    "
+                                  >
+                                    <path
+                                      d="M22 5a6 6 0 0 1 3.643 10.768 9.003 9.003 0 0 1 5.353 7.967L31 24h-2a7.002 7.002 0 0 0-5.999-6.929v-2.197A4.002 4.002 0 0 0 22 7a4 4 0 0 0-3.679 5.574A4.991 4.991 0 0 1 21 17a4.986 4.986 0 0 1-1.599 3.665 9.003 9.003 0 0 1 5.595 8.07L25 29h-2a7.002 7.002 0 0 0-5.999-6.929v-2.242a3.001 3.001 0 1 0-2 0L15 22.071a7.002 7.002 0 0 0-5.996 6.688L9 29H7a9.003 9.003 0 0 1 5.6-8.335 5 5 0 0 1 1.077-8.093A4 4 0 1 0 9 14.874v2.197a7.002 7.002 0 0 0-5.996 6.688L3 24H1a9.002 9.002 0 0 1 5.357-8.232A6 6 0 1 1 15.917 10h.166A6.002 6.002 0 0 1 22 5z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                                <div class="detail-item-text">
+                                  Tối đa 4 khách
+                                </div>
+                              </div>
+                              <div class="content-wrap">
+                                <div class="content-icon">
+                                  <svg
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
+                                    style="
+                                      display: block;
+                                      height: 24px;
+                                      width: 24px;
+                                      fill: currentcolor;
+                                    "
+                                  >
+                                    <path
+                                      d="M13.693 13.934a4 4 0 0 1 5.283.595l.292.366 4.768 6.755a4 4 0 0 1 .596 3.342 4.004 4.004 0 0 1-4.496 2.913l-.403-.084-3.474-.932a1 1 0 0 0-.518 0l-3.474.932a4 4 0 0 1-2.941-.347l-.401-.249a4.004 4.004 0 0 1-1.19-5.207l.229-.368 4.768-6.755a4 4 0 0 1 .961-.96zm3.756 1.889a2 2 0 0 0-2.979.09l-.104.136-4.838 6.861a2 2 0 0 0 2.048 3.017l.173-.038 3.992-1.07a1 1 0 0 1 .518 0l3.964 1.063.143.034a2 2 0 0 0 2.132-2.963l-4.947-7.014zM27 12a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM5 12a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm22 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM5 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm10 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM11 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                                <div class="detail-item-text">
+                                  Được phép mang theo thú cưng
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cover-detail-item w-100">
+                            <div class="detail-item-header">
+                              Hoạt động được cho phép
+                            </div>
+                            <div class="detail-item-content">
+                              <div class="content-wrap">
+                                <div class="content-icon">
+                                  <svg
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
+                                    style="
+                                      display: block;
+                                      height: 24px;
+                                      width: 24px;
+                                      fill: currentcolor;
+                                    "
+                                  >
+                                    <path
+                                      d="m15.9999.3335c8.6524795 0 15.6667 7.01422051 15.6667 15.6667 0 8.6524795-7.0142205 15.6667-15.6667 15.6667-8.65247949 0-15.6667-7.0142205-15.6667-15.6667 0-8.65247949 7.01422051-15.6667 15.6667-15.6667zm0 2c-7.54790999 0-13.6667 6.11879001-13.6667 13.6667 0 7.54791 6.11879001 13.6667 13.6667 13.6667 7.54791 0 13.6667-6.11879 13.6667-13.6667 0-7.54790999-6.11879-13.6667-13.6667-13.6667zm1.0001 3v10.0895l8.7375978 5.0444733-.9999956 1.7320534-9.7376022-5.6219748v-11.2440519z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                                <div class="detail-item-text">
+                                  Nhận phòng sau 11:00
+                                </div>
+                              </div>
+                              <div class="content-wrap">
+                                <div class="content-icon">
+                                  <svg
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
+                                    style="
+                                      display: block;
+                                      height: 24px;
+                                      width: 24px;
+                                      fill: currentcolor;
+                                    "
+                                  >
+                                    <path
+                                      d="m15.9999.3335c8.6524795 0 15.6667 7.01422051 15.6667 15.6667 0 8.6524795-7.0142205 15.6667-15.6667 15.6667-8.65247949 0-15.6667-7.0142205-15.6667-15.6667 0-8.65247949 7.01422051-15.6667 15.6667-15.6667zm0 2c-7.54790999 0-13.6667 6.11879001-13.6667 13.6667 0 7.54791 6.11879001 13.6667 13.6667 13.6667 7.54791 0 13.6667-6.11879 13.6667-13.6667 0-7.54790999-6.11879-13.6667-13.6667-13.6667zm1.0001 3v10.0895l8.7375978 5.0444733-.9999956 1.7320534-9.7376022-5.6219748v-11.2440519z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                                <div class="detail-item-text">
+                                  Trả phòng trước 12:00
+                                </div>
+                              </div>
+                              <div class="content-wrap">
+                                <div class="content-icon">
+                                  <svg
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    focusable="false"
+                                    style="
+                                      display: block;
+                                      height: 24px;
+                                      width: 24px;
+                                      fill: currentcolor;
+                                    "
+                                  >
+                                    <path
+                                      d="m24.3334 1.66675c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323-.00065 24.666 3.00065.00075v2h-26.66665v-2l3-.00075v-24.666c0-1.05436681.81587301-1.91816558 1.850737-1.99451429l.149263-.00548571zm-4.00065 2h-12.666l-.00075 24.66625 12.66675-.00025zm4.00065 0h-2.00065v24.666l2.00025.00025zm-7.0001 11.00002c.7363778 0 1.33333.5969522 1.33333 1.33333s-.5969522 1.33333-1.33333 1.33333-1.33333-.5969522-1.33333-1.33333.5969522-1.33333 1.33333-1.33333z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                                <div class="detail-item-text">
+                                  Tự nhận phòng bằng nhân viên trực cửa
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div id="date" class="info-date">
+                    <div class="date-header">Chọn ngày nhận phòng</div>
+                    <div class="date-des">
+                      Thêm ngày đi để biết giá chính xác
+                    </div>
+                    <input
+                      class="input__in"
+                      id="myID"
+                      type="text"
+                      placeholder="Chọn ngày"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <div class="info-booking-mobile">
+                <div
+                  class="container d-flex justify-content-between align-items-center"
+                >
+                  <div class="booking-mobile-left">
+                    <div class="booking-mobile-money">
+                      <span>đ 1,000,000</span> / đêm
+                    </div>
+                    <div class="booking-mobile-time">
+                      <a href="#date" class="time-mobile">
+                        <span class="time-mobile-in"></span><span> - </span
+                        ><span class="time-mobile-out"></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="booking-mobile-right">
+                    <a href="./payment.html"
+                      ><button class="booking-mobile-btn">Đặt phòng</button></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="info-booking">
+                <div class="booking-money-rate">
+                  <div class="booking-money"><span>đ 1,000,000</span>/đêm</div>
+                  <div class="booking-rate">
+                    <div class="booking-rate-icon">
+                      <img src="./assets/image/Star (2).png" alt="" />
+                    </div>
+                    <div class="booking-rate-des">4.60</div>
+                  </div>
+                </div>
+                <div class="booking-form">
+                  <div class="time">
+                    <div class="time-check-in">
+                      <label for="in" class="check-in"
+                        ><span class="come">Nhận </span>phòng</label
+                      >
+                      <input
+                        class="in"
+                        type="text"
+                        name=""
+                        id="in"
+                        placeholder="Thêm ngày"
+                      />
+                    </div>
+                    <div class="time-check-out">
+                      <label for="out" class="check-out"
+                        ><span class="leave">Trả</span> phòng</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="out"
+                        class="input__out"
+                        placeholder="Thêm ngày"
+                      />
+                    </div>
+                  </div>
+                  <div class="guest-wrap">
+                    <input type="checkbox" name="" id="guest-menu-input" />
+                    <label
+                      class="guest-menu-overlay"
+                      for="guest-menu-input"
+                    ></label>
+                    <div class="guest-menu">
+                      <div class="guest-list">
+                        <div class="guest-item">
+                          <div class="item-left">
+                            <div class="item-left-header">Người lớn</div>
+                            <div class="item-left-des">Từ 13 tuổi trở lên</div>
+                          </div>
+                          <div class="item-right">
+                            <div class="item-right-reduce" data-type="adult">
+                              -
+                            </div>
+                            <div
+                              class="item-right-quantity"
+                              data-type="adult"
+                              data-max="5"
+                            >
+                              1
+                            </div>
+                            <div class="item-right-increase" data-type="adult">
+                              +
+                            </div>
+                          </div>
+                        </div>
+                        <div class="guest-item">
+                          <div class="item-left">
+                            <div class="item-left-header">Trẻ em</div>
+                            <div class="item-left-des">Độ tuổi 2 - 12</div>
+                          </div>
+                          <div class="item-right">
+                            <div class="item-right-reduce" data-type="child">
+                              -
+                            </div>
+                            <div
+                              class="item-right-quantity"
+                              data-type="child"
+                              data-max="4"
+                            >
+                              0
+                            </div>
+                            <div class="item-right-increase" data-type="child">
+                              +
+                            </div>
+                          </div>
+                        </div>
+                        <div class="guest-item">
+                          <div class="item-left">
+                            <div class="item-left-header">Em bé</div>
+                            <div class="item-left-des">Dưới 2 tuổi</div>
+                          </div>
+                          <div class="item-right">
+                            <div class="item-right-reduce" data-type="baby">
+                              -
+                            </div>
+                            <div
+                              class="item-right-quantity"
+                              data-type="baby"
+                              data-max="5"
+                            >
+                              0
+                            </div>
+                            <div class="item-right-increase" data-type="baby">
+                              +
+                            </div>
+                          </div>
+                        </div>
+                        <div class="guest-item">
+                          <div class="item-left">
+                            <div class="item-left-header">Thú cưng</div>
+                            <div class="item-left-des"></div>
+                          </div>
+                          <div class="item-right">
+                            <div class="item-right-reduce" data-type="pet">
+                              -
+                            </div>
+                            <div
+                              class="item-right-quantity"
+                              data-type="pet"
+                              data-max="5"
+                            >
+                              0
+                            </div>
+                            <div class="item-right-increase" data-type="pet">
+                              +
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <label for="guest-menu-input" class="guest-menu-close"
+                        >Đóng</label
+                      >
+                    </div>
+                    <label class="guest" for="guest-menu-input">
+                      <div class="guest-header">Khách</div>
+                      <div class="guest-input">
+                        <div class="guest-count">
+                          <span class="guest-adult-child">1 khách </span
+                          ><span class="guest-baby">, 1 em bé</span
+                          ><span class="guest-pet">, 1 thú cưng</span>
+                        </div>
+                        <img src="./assets/image/Frame (14).png" alt="" />
+                      </div>
+                    </label>
+                  </div>
+                  <a href="./payment.html" class="order-room">Đặt phòng</a>
+                  <div class="cost-wrap">
+                    <div class="cost-list">
+                      <div class="cost-item">
+                        <div class="calc-wrap">
+                          <input type="checkbox" id="calc-input-room" />
+                          <label for="calc-input-room" class="calc-item">
+                            <span class="cost-night">đ 1,000,000</span> x
+                            <span class="count-night">1 đêm</span>
+                          </label>
+                          <label
+                            for="calc-input-room"
+                            class="calc-overlay-room"
+                          ></label>
+                          <div class="item-small-des">
+                            <label
+                              for="calc-input-room"
+                              class="small-des-close"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="25"
+                                height="25"
+                                fill="currentColor"
+                                class="bi bi-x"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                />
+                              </svg>
+                            </label>
+                            <div class="small-des-text">Phí thuê phòng</div>
+                          </div>
+                        </div>
+                        <div data-type="night" class="total-item">
+                          đ 1,000,000
+                        </div>
+                      </div>
+                      <div class="cost-item">
+                        <div class="calc-wrap">
+                          <input type="checkbox" id="calc-input-clean" />
+                          <label for="calc-input-clean" class="calc-item">
+                            <span class="cost-night">Phí vệ sinh </span>
+                          </label>
+                          <label
+                            for="calc-input-clean"
+                            class="calc-overlay-clean"
+                          ></label>
+                          <div class="item-small-des">
+                            <label
+                              for="calc-input-clean"
+                              class="small-des-close"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="25"
+                                height="25"
+                                fill="currentColor"
+                                class="bi bi-x"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                />
+                              </svg>
+                            </label>
+                            <div class="small-des-text">
+                              Khoản phí một lần do chủ nhà tính để trang trải
+                              chi phí vệ sinh chỗ của họ.
+                            </div>
+                          </div>
+                        </div>
+                        <div data-type="clean" class="total-item">
+                          đ 200,000
+                        </div>
+                      </div>
+                      <div class="cost-item">
+                        <div class="calc-wrap">
+                          <input type="checkbox" id="calc-input" />
+                          <label for="calc-input" class="calc-item">
+                            <span class="cost-night"
+                              >Phí dịch vụ <span class="cost-icon">Tai</span>
+                            </span>
+                          </label>
+                          <label for="calc-input" class="calc-overlay"></label>
+                          <div class="item-small-des">
+                            <label for="calc-input" class="small-des-close">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="25"
+                                height="25"
+                                fill="currentColor"
+                                class="bi bi-x"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                />
+                              </svg>
+                            </label>
+                            <div class="small-des-text">
+                              Điều này giúp chúng tôi vận hành nền tảng của mình
+                              và cung cấp các dịch vụ như hỗ trợ 24/7 trong
+                              chuyến đi của bạn.
+                            </div>
+                          </div>
+                        </div>
+                        <div data-type="service" class="total-item">
+                          đ 1,000,000
+                        </div>
+                      </div>
+                    </div>
+                    <div class="total">
+                      <div class="total-des">Tổng</div>
+                      <div class="total-cost">đ 1,000,000</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="info-rating">
+            <div class="rating-header">
+              <div class="rating-header-icon">
+                <img src="./assets/image/Star (1).png" alt="" />
+              </div>
+              <div class="rating-header-des">4.60 (280)</div>
+            </div>
+            <div class="rating-list">
+              <div class="row gy-5">
+                <div class="col-12 col-md-6">
+                  <div class="rating-item">
+                    <div class="rating-item-user">
+                      <div class="rating-item-user-avatar">
+                        <img src="./img/room1/1.png" alt="" />
+                      </div>
+                      <div class="rating-item-user-name">
+                        <span>Huns</span>
+                        <div class="rating-item-user-date">
+                          tháng 7 năm 2021
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rating-item-content">
+                      Khu nghỉ dưỡng bãi biển tuyệt vời và sang trọng trong một
+                      khung cảnh hẻo lánh thanh bình... một kho báu ẩn mình ở
+                      Laguna Lang Co. Thức ăn rất tuyệt vời và nhân viên rất sẵn
+                      lòng giúp đỡ khách.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="rating-item">
+                    <div class="rating-item-user">
+                      <div class="rating-item-user-avatar">
+                        <svg
+                          width="50"
+                          height="50"
+                          viewBox="0 0 32 31"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                            fill="#304659"
+                          />
+                        </svg>
+                      </div>
+                      <div class="rating-item-user-name">
+                        <span>Huns</span>
+                        <div class="rating-item-user-date">
+                          tháng 7 năm 2021
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rating-item-content">
+                      Khu nghỉ dưỡng bãi biển tuyệt vời và sang trọng trong một
+                      khung cảnh hẻo lánh thanh bình... một kho báu ẩn mình ở
+                      Laguna Lang Co. Thức ăn rất tuyệt vời và nhân viên rất sẵn
+                      lòng giúp đỡ khách.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="rating-item">
+                    <div class="rating-item-user">
+                      <div class="rating-item-user-avatar">
+                        <svg
+                          width="50"
+                          height="50"
+                          viewBox="0 0 32 31"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                            fill="#304659"
+                          />
+                        </svg>
+                      </div>
+                      <div class="rating-item-user-name">
+                        <span>Huns</span>
+                        <div class="rating-item-user-date">
+                          tháng 7 năm 2021
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rating-item-content">
+                      Khu nghỉ dưỡng bãi biển tuyệt vời và sang trọng trong một
+                      khung cảnh hẻo lánh thanh bình... một kho báu ẩn mình ở
+                      Laguna Lang Co. Thức ăn rất tuyệt vời và nhân viên rất sẵn
+                      lòng giúp đỡ khách.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="rating-item">
+                    <div class="rating-item-user">
+                      <div class="rating-item-user-avatar">
+                        <svg
+                          width="50"
+                          height="50"
+                          viewBox="0 0 32 31"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                            fill="#304659"
+                          />
+                        </svg>
+                      </div>
+                      <div class="rating-item-user-name">
+                        <span>Huns</span>
+                        <div class="rating-item-user-date">
+                          tháng 7 năm 2021
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rating-item-content">
+                      Khu nghỉ dưỡng bãi biển tuyệt vời và sang trọng trong một
+                      khung cảnh hẻo lánh thanh bình... một kho báu ẩn mình ở
+                      Laguna Lang Co. Thức ăn rất tuyệt vời và nhân viên rất sẵn
+                      lòng giúp đỡ khách.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="rating-more d-none" href>
+                    Hiển thị tất cả 280 bình luận
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="info-map">
+            <div class="map-text">
+              <div class="map-header">Nơi bạn sẽ đến</div>
+              <div class="map-des">Đà Nẵng</div>
+            </div>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61332.24255045887!2d108.2750939!3d16.1035785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142178cae6f1a13%3A0x85e6b1a09ba78527!2zU8ahbiBUcsOgLCDEkMOgIE7hurVuZw!5e0!3m2!1svi!2s!4v1681258418524!5m2!1svi!2s"
+                width="1000"
+                height="500"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content--left">
+            <div class="footer__content--left--header">
+              Khám phá thế giới cùng với Tai!
+            </div>
+            <div class="footer__content--left--des">
+              Chúng tôi cung cấp các dịch vụ phù hợp cho mọi nhu cầu du lịch của
+              bạn. Chủ nhà của chúng tôi rất tuyệt vời, sẵn sàng đáp ứng kỳ nghỉ
+              của bạn khi bạn tận hưởng kỳ nghỉ của mình mà không phải lo lắng.
+            </div>
+            <div class="footer__content--left--icon">© 2023 Tai.</div>
+          </div>
+          <div class="footer__content--right">
+            <div class="footer__content--right--infor">
+              <a href="./about-us.html" class="infor__item">Về chúng tôi</a>
+
+              <a href="./help.html" class="infor__item">Trợ giúp</a>
+              <a href="./privacy.html" class="infor__item"
+                >Chính sách riêng tư</a
+              >
+              <label for="contact-input" class="infor__item">Liên hệ</label>
+            </div>
+            <div class="mail-des">Nhận thêm thông tin về chúng tôi</div>
+            <div class="footer__content--right--mail">
+              <form action="" style="display: flex">
+                <input
+                  type="email"
+                  placeholder="Nhập địa chỉ email của bạn"
+                /><button
+                  type="submit
+                "
+                  style="cursor: pointer"
+                >
+                  Gửi <img src="./img/Frame (6).png" alt="" />
+                </button>
+              </form>
+            </div>
+            <div class="footer__content--right--icon">
+              <div class="footer__content--left--icon-onmobile">
+                © 2023 Tai.
+              </div>
+              <a href="https://twitter.com/home?lang=en" class="icon__item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#1D9BF0"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  /></svg
+              ></a>
+              <a href="https://www.facebook.com" class="icon__item"
+                ><img src="./assets/image/Facebook_f_logo_(2019).svg" alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com"
+                class="icon__item"
+                style="background-color: unset"
+                ><img src="./assets/image/Instagram_logo_2016.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <input type="checkbox" id="contact-input" />
+      <label for="contact-input" class="info-contact-overlay"></label>
+      <div class="info-contact-detail">
+        <label for="contact-input" class="cover-detail-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </label>
+        <div class="detail-wrap">
+          <div class="cover-detail-header-contact">
+            <div class="detail-header-icon-contact">
+              <img src="./img/Group (4).png" alt="" />
+            </div>
+            <div class="detail-header-text-contact">
+              Nếu quý khách có thắc mắc, xin vui lòng liên hệ chúng tôi theo
+              thông tin dưới đây:
+            </div>
+          </div>
+          <div class="cover-detail-list">
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Email:</div>
+              <a
+                href="mailto: leductai9898@gmail.com"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                leductai9898@gmail.com
+              </a>
+            </div>
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Hotline:</div>
+              <a
+                href="tel: 0776455910"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                0776455910
+              </a>
+            </div>
+            <div class="cover-detail-item active">
+              <div class="detail-item-header-contact">Địa chỉ</div>
+              <div class="detail-item-text-contact">
+                A1 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội
+                <div class="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.046139559176!2d105.8478321!3d21.002194!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac740ba3819f%3A0x2b5ef5b01461f9e7!2zU8OibiB24bqtbiDEkeG7mW5nIFRyxrDhu51uZyDEkOG6oWkgaOG7jWMgQsOhY2ggS2hvYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1680714956256!5m2!1svi!2s"
+                    width="800"
+                    height="600"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pop-up-list">
+      <div class="pop-up">
+        <div class="toast-icon">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </div>
+        <div class="toast-content">Vui lòng chọn ngày nhận và trả phòng</div>
+        <div class="toast-close">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./library/bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./assets/js/range_Plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/room_detail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+:root {
+  --background-color: #3a6ad5;
+  --primary-color: white;
+  --text-color: #304659;
+  --placecholdeer-color: #696f8c;
+  --border-bottom-color: #9fa3b4;
+}
+.user-name,
+.user-name-edit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.user-name-edit {
+  display: none;
+}
+.user-name.disabled {
+  display: none;
+}
+.user-name-edit.active {
+  display: flex;
+}
+.name-edit {
+  font-weight: 700;
+  width: fit-content;
+  text-decoration: underline;
+  cursor: pointer;
+  height: fit-content;
+  text-align: end;
+}
+.name-des {
+  width: 85%;
+}
+.name-header {
+  font-weight: 700;
+}
+.name-text {
+  padding: 5px;
+}
+#name-input,
+#oldpass-input,
+#newpass-input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--border-bottom-color);
+  padding: 5px;
+  color: inherit;
+  width: 100%;
+}
+#oldpass-input.error,
+#newpass-input.error {
+  border-color: red;
+}
+.password-header {
+  font-weight: 700;
+}
+.password-des {
+  width: 85%;
+}
+.password-text {
+  padding: 5px;
+}
+.email-header {
+  font-weight: 700;
+}
+.email-text {
+  padding: 5px;
+}
+.user-password,
+.user-password-edit {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.user-password.disabled {
+  display: none;
+}
+.password-edit-wrap {
+  display: none;
+}
+.password-edit-wrap.active {
+  display: block;
+}
+.password-edit {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  height: fit-content;
+  text-align: end;
+}
+.user-email {
+  margin-top: 20px;
+}
+
+.error-oldpass,
+.error-newpass {
+  color: red;
+  margin-left: 20px;
+}
+.edit-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

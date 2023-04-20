@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhà nghỉ dưỡng & Căn hộ cho thuê - Tai</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/image/Group.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/swiper_index.css" />
+    <link rel="stylesheet" href="./grid_system.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+  </head>
+  <body>
+    <div class="image-background">
+      <div class="image-slider active">
+        <img src="./assets/image/city/AnyConv.com__pexels-pixabay-258154.webp" />
+      </div>
+      <div class="image-slider">
+        <img src="./assets/image/city/AnyConv.com__pexels-rachel-claire-4825701.webp" />
+      </div>
+      <div class="image-slider">
+        <img src="./assets/image/city/AnyConv.com__pexels-spencer-davis-4356144.webp" />
+      </div>
+    </div>
+    <section class="header">
+      <div class="header-wrap">
+        <div class="nav">
+          <a href="./index.html" class="nav__icon">
+            <img src="./img/Group.png" alt="" />
+          </a>
+          <a href="./index.html" class="nav__icon-tablet-mobile">
+            <img src="./img/Group (4).png" alt="" />
+          </a>
+          <div class="header__search on-tablet-mobile">
+            <div class="search-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </div>
+            <div class="header__search--location">
+              <div class="header__search--location--des">
+                <div class="header__search--location--des--header">
+                  <div class="location-input-wrap-mobile">
+                    <input
+                      class="input-location-mobile"
+                      type="search"
+                      placeholder="Địa điểm"
+                    />
+                    <div class="location-menu-overlay-mobile"></div>
+                    <div class="location-menu">
+                      <div class="location-list">
+                        <div class="location-item">
+                          <div class="location-item-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="22"
+                              height="22"
+                              fill="currentColor"
+                              class="bi bi-geo-alt"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                              />
+                              <path
+                                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                              />
+                            </svg>
+                          </div>
+                          <div class="location-item-text">Hà Nội</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__search--location--des--icon">
+                  <img src="./img/chevron_forward.png" alt="" />
+                </div>
+              </div>
+              <input
+                type="search"
+                class="header__search--location--input"
+                placeholder="Điểm đến của bạn"
+              />
+            </div>
+            <div class="header__search--day-on-tablet">
+              <input
+                id="input-start-end"
+                type="text"
+                placeholder="Ngày"
+                class="input-mobile"
+              />
+            </div>
+            <div class="people-wrap">
+              <label
+                for="guest-menu-input-mobile"
+                class="header__search--people"
+                id="header__search--people-pc"
+              >
+                <div class="header__search--people--placeholder-mobile">
+                  <div class="guest-adult-child-mobile">1 khách</div>
+                  <div class="guest-baby-mobile">, 1 em bé</div>
+                  <div class="guest-pet-mobile">, 1 thú cưng</div>
+                </div>
+              </label>
+              <input type="checkbox" name="" id="guest-menu-input-mobile" />
+              <label
+                class="guest-menu-overlay-mobile"
+                for="guest-menu-input-mobile"
+              ></label>
+              <div class="guest-menu">
+                <div class="guest-list">
+                  <div class="guest-item">
+                    <div class="item-left">
+                      <div class="item-left-header">Người lớn</div>
+                      <div class="item-left-des">Từ 13 tuổi trở lên</div>
+                    </div>
+                    <div class="item-right">
+                      <div class="item-right-reduce-mobile" data-type="adult">
+                        -
+                      </div>
+                      <div
+                        class="item-right-quantity-mobile"
+                        data-type="adult"
+                        data-max="16"
+                      >
+                        1
+                      </div>
+                      <div class="item-right-increase-mobile" data-type="adult">
+                        +
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guest-item">
+                    <div class="item-left">
+                      <div class="item-left-header">Trẻ em</div>
+                      <div class="item-left-des">Độ tuổi 2 - 12</div>
+                    </div>
+                    <div class="item-right">
+                      <div class="item-right-reduce-mobile" data-type="child">
+                        -
+                      </div>
+                      <div
+                        class="item-right-quantity-mobile"
+                        data-type="child"
+                        data-max="15"
+                      >
+                        0
+                      </div>
+                      <div class="item-right-increase-mobile" data-type="child">
+                        +
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guest-item">
+                    <div class="item-left">
+                      <div class="item-left-header">Em bé</div>
+                      <div class="item-left-des">Dưới 2 tuổi</div>
+                    </div>
+                    <div class="item-right">
+                      <div class="item-right-reduce-mobile" data-type="baby">
+                        -
+                      </div>
+                      <div
+                        class="item-right-quantity-mobile"
+                        data-type="baby"
+                        data-max="5"
+                      >
+                        0
+                      </div>
+                      <div class="item-right-increase-mobile" data-type="baby">
+                        +
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guest-item">
+                    <div class="item-left">
+                      <div class="item-left-header">Thú cưng</div>
+                      <div class="item-left-des"></div>
+                    </div>
+                    <div class="item-right">
+                      <div class="item-right-reduce-mobile" data-type="pet">
+                        -
+                      </div>
+                      <div
+                        class="item-right-quantity-mobile"
+                        data-type="pet"
+                        data-max="5"
+                      >
+                        0
+                      </div>
+                      <div class="item-right-increase-mobile" data-type="pet">
+                        +
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="guest-menu-input-mobile" class="guest-menu-close"
+                  >Đóng</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="nav__button">
+            <a class="nav__button--host" style="cursor: default"
+              >Trở thành chủ nhà</a
+            >
+            <div class="nav__button--languages">
+              <div class="nav__button--languages--button">
+                <img src="./img/Group (1).png" alt="" />
+              </div>
+              <div class="nav__button--languages--button on-tablet-mobile">
+                <img src="./img/Group (5).png" alt="" />
+              </div>
+              <div class="nav__button--languages--country">VN</div>
+            </div>
+            <div class="user-wrap">
+              <div class="nav__button--user">
+                <div class="nav__button--user--button">
+                  <img src="./img/Frame (1).png" alt="" />
+                </div>
+                <div class="nav__button--user--icon">
+                  <img src="./img/Frame.png" alt="" />
+                </div>
+              </div>
+              <div class="user__overlay"></div>
+              <div class="user__menu">
+                <a
+                  href="./sign-in.html"
+                  style="color: inherit; text-decoration: none"
+                  class="user__menu-login"
+                  >Đăng nhập</a
+                >
+                <a
+                  href="./sign-up.html"
+                  style="color: inherit; text-decoration: none"
+                  class="user__menu-signup"
+                  >Đăng ký</a
+                >
+                <div class="user__menu-become-host" style="cursor: default">
+                  Cho thuê chỗ ở
+                </div>
+                <a
+                  href="./help.html"
+                  style="color: inherit; text-decoration: none"
+                  class="user__menu-help"
+                  >Trợ giúp</a
+                >
+              </div>
+            </div>
+            <div class="nav__button--user on-tablet-mobile">
+              <div class="nav__button--user--button">
+                <img src="./img/Frame (8).png" alt="" />
+              </div>
+              <div class="nav__button--user--icon">
+                <img src="./img/Frame (7).png" alt="" />
+              </div>
+            </div>
+            <label class="menu-icon" for="mobile-menu">
+              <img src="./img/list.svg" alt="" />
+            </label>
+            <input class="input-mobile-menu" type="checkbox" id="mobile-menu" />
+            <label class="overlay-mobile" for="mobile-menu"></label>
+            <div class="menu">
+              <label class="close-mobile-menu" for="mobile-menu"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </label>
+              <div class="avatar">
+                <img src="./img/Frame (7).png" alt="" />
+                <p>Khách</p>
+              </div>
+              <ul class="menu-list">
+                <li>
+                  <a href="./sign-in.html" class="menu-item">Đăng nhập</a>
+                </li>
+                <li>
+                  <a href="./sign-up.html" class="menu-item end-user"
+                    >Đăng ký</a
+                  >
+                </li>
+                <li>
+                  <a class="menu-item" style="cursor: default"
+                    >Trở thành chủ nhà</a
+                  >
+                </li>
+                <li class="menu-item-languages">
+                  Ngôn ngữ: <span>Tiếng Việt</span>
+                </li>
+                <li><a href="./help.html" class="menu-item">Trợ giúp</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__des">Khám phá địa điểm mới</div>
+        <div class="header__picture">
+          <img src="./img/Group (2).png" alt="" />
+        </div>
+      </div>
+
+      <div class="header__search hide-on-tablet-mobile">
+        <div class="header__search--location">
+          <div class="header__search--location--des">
+            <div class="header__search--location--des--header">Địa điểm</div>
+          </div>
+
+          <div class="location-input-wrap-pc">
+            <input
+              type="search"
+              class="header__search--location--input"
+              placeholder="Điểm đến của bạn"
+            />
+            <div class="location-menu-pc-overlay"></div>
+            <div class="location-menu">
+              <div class="location-list">
+                <div class="location-item">
+                  <div class="location-item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-geo-alt"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                      />
+                      <path
+                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="location-item-text">Hà Nội</div>
+                </div>
+                <div class="location-item">
+                  <div class="location-item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-geo-alt"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                      />
+                      <path
+                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="location-item-text">Hà Nội</div>
+                </div>
+                <div class="location-item">
+                  <div class="location-item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-geo-alt"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                      />
+                      <path
+                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="location-item-text">Hà Nội</div>
+                </div>
+                <div class="location-item">
+                  <div class="location-item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-geo-alt"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                      />
+                      <path
+                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="location-item-text">Hà Nội</div>
+                </div>
+                <div class="location-item">
+                  <div class="location-item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-geo-alt"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                      />
+                      <path
+                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="location-item-text">Hà Nội</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__search--day">
+          <div class="day-start">
+            <div class="header__search--day--des">
+              <div class="header__search--day--des-header">Nhận phòng</div>
+            </div>
+            <div class="header__search--day--placeholder">
+              <input
+                id="start"
+                class="input-start"
+                type="text"
+                placeholder="Thêm ngày"
+              />
+            </div>
+          </div>
+          <div class="day-end">
+            <div class="header__search--day--des">
+              <div class="header__search--day--des-header">Trả phòng</div>
+            </div>
+            <div class="header__search--day--placeholder">
+              <input
+                id="end"
+                class="input-end"
+                type="text"
+                placeholder="Thêm ngày"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="people-wrap-pc">
+          <input type="checkbox" name="" id="guest-menu-input-pc" />
+          <label for="guest-menu-input-pc" class="header__search--people-pc">
+            <div class="header__search--people--des">
+              <div class="header__search--people--des--header">Số lượng</div>
+              <div class="header__search--people--des-icon">
+                <img src="./img/chevron_forward.png" alt="" />
+              </div>
+            </div>
+            <div class="header__search--people--placeholder-pc">
+              <div class="guest-adult-child" data-max="16">1 khách</div>
+              <div class="guest-baby">, 1 em bé</div>
+              <div class="guest-pet">, 1 thú cưng</div>
+            </div>
+          </label>
+          <label
+            class="guest-menu-overlay-pc"
+            for="guest-menu-input-pc"
+          ></label>
+          <div class="guest-menu-pc">
+            <div class="guest-list">
+              <div class="guest-item">
+                <div class="item-left">
+                  <div class="item-left-header">Người lớn</div>
+                  <div class="item-left-des">Từ 13 tuổi trở lên</div>
+                </div>
+                <div class="item-right">
+                  <div class="item-right-reduce" data-type="adult">-</div>
+                  <div
+                    class="item-right-quantity"
+                    data-type="adult"
+                    data-max="16"
+                  >
+                    1
+                  </div>
+                  <div class="item-right-increase" data-type="adult">+</div>
+                </div>
+              </div>
+              <div class="guest-item">
+                <div class="item-left">
+                  <div class="item-left-header">Trẻ em</div>
+                  <div class="item-left-des">Độ tuổi 2 - 12</div>
+                </div>
+                <div class="item-right">
+                  <div class="item-right-reduce" data-type="child">-</div>
+                  <div
+                    class="item-right-quantity"
+                    data-type="child"
+                    data-max="15"
+                  >
+                    0
+                  </div>
+                  <div class="item-right-increase" data-type="child">+</div>
+                </div>
+              </div>
+              <div class="guest-item">
+                <div class="item-left">
+                  <div class="item-left-header">Em bé</div>
+                  <div class="item-left-des">Dưới 2 tuổi</div>
+                </div>
+                <div class="item-right">
+                  <div class="item-right-reduce" data-type="baby">-</div>
+                  <div
+                    class="item-right-quantity"
+                    data-type="baby"
+                    data-max="5"
+                  >
+                    0
+                  </div>
+                  <div class="item-right-increase" data-type="baby">+</div>
+                </div>
+              </div>
+              <div class="guest-item">
+                <div class="item-left">
+                  <div class="item-left-header">Thú cưng</div>
+                  <div class="item-left-des"></div>
+                </div>
+                <div class="item-right">
+                  <div class="item-right-reduce" data-type="pet">-</div>
+                  <div class="item-right-quantity" data-type="pet" data-max="5">
+                    0
+                  </div>
+                  <div class="item-right-increase" data-type="pet">+</div>
+                </div>
+              </div>
+            </div>
+            <label for="guest-menu-input-pc" class="guest-menu-close"
+              >Đóng</label
+            >
+          </div>
+        </div>
+        <button class="btn header__search--button">Khám phá ngay</button>
+      </div>
+    </section>
+    <section class="filter swiper">
+      <div class="filter__list swiper-wrapper">
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+        <div class="filter__item swiper-slide">
+          <div class="filter__item--picture">
+            <img src="./img/Image.png" alt="" />
+          </div>
+
+          <div class="filter__item--des"><span>Hồ bơi</span></div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </section>
+    <section class="booking__room">
+      <div class="booking-filter-wrap">
+        <label for="input-booking-room-filter" class="booking__room--filter">
+          <img src="./img/Vector (5).png" alt="" />
+          <p>Bộ lọc</p>
+        </label>
+        <input type="checkbox" name="" id="input-booking-room-filter" />
+        <label
+          for="input-booking-room-filter"
+          class="booking-filter-overlay"
+        ></label>
+        <div class="booking-filter-menu-wrap">
+          <div class="booking-filter-menu">
+            <label for="input-booking-room-filter" class="cover-detail-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </label>
+            <div class="booking-filter-menu-header">Bộ lọc</div>
+            <div class="booking-filter-list">
+              <div class="booking-filter-item">
+                <div class="booking-filter-item-header">Khoảng giá</div>
+                <div class="booking-filter-item-price">
+                  <div class="range-price">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="range-input">
+                    <input
+                      type="range"
+                      class="range-min"
+                      min="500000"
+                      max="2000000"
+                      value="500000"
+                      step="10000"
+                    />
+                    <input
+                      type="range"
+                      class="range-max"
+                      min="500000"
+                      max="2000000"
+                      value="2000000"
+                      step="10000"
+                    />
+                  </div>
+                  <div class="number-price">
+                    <div class="min-price">
+                      <div class="min-price-text">Giá tối thiểu</div>
+                      <div class="number-wrap">
+                        <span>đ</span>
+                        <input type="number" class="input-min" value="500000" />
+                      </div>
+                    </div>
+                    <div class="max-price">
+                      <div class="max-price-text">Giá tối đa</div>
+                      <div class="number-wrap">
+                        <span>đ</span
+                        ><input
+                          type="number"
+                          class="input-max"
+                          value="2000000"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-filter-item">
+                <div class="booking-filter-item-header">Loại nơi ở</div>
+                <div class="booking-filter-item-type-list">
+                  <input id="entire-house" type="checkbox" class="type-input" />
+                  <label for="entire-house" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Toàn bộ nhà</div>
+                      <div class="type-des">
+                        Toàn bộ nơi ở dành riêng cho bạn
+                      </div>
+                    </div>
+                  </label>
+                  <input
+                    id="private-house"
+                    type="checkbox"
+                    class="type-input"
+                  />
+                  <label for="private-house" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Phòng riêng</div>
+                      <div class="type-des">
+                        Phòng riêng của bạn trong một ngôi nhà hoặc khách sạn,
+                        cùng với không gian sinh hoạt chung
+                      </div>
+                    </div>
+                  </label>
+                  <input id="commom-house" type="checkbox" class="type-input" />
+                  <label for="commom-house" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Phòng chung</div>
+                      <div class="type-des">
+                        Không gian để ngủ và các khu vực có thể sinh hoạt chung
+                        với người khác
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="booking-filter-item">
+                <div class="booking-filter-item-header">Phòng và phòng ngủ</div>
+                <div class="booking-filter-item-type-list room-count">
+                  <div class="type-item">
+                    <div class="type-item-header">Phòng ngủ</div>
+                    <div class="type-item-des">
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-0"
+                        checked
+                      />
+                      <label class="label-sleep any" for="sleep-0"
+                        >Bất kì</label
+                      >
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-1"
+                      /><label class="label-sleep" for="sleep-1">1</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-2"
+                      /><label class="label-sleep" for="sleep-2">2</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-3"
+                      /><label class="label-sleep" for="sleep-3">3</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-4"
+                      /><label class="label-sleep" for="sleep-4">4</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-5"
+                      /><label class="label-sleep" for="sleep-5">5</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-6"
+                      /><label class="label-sleep" for="sleep-6">6</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-7"
+                      /><label class="label-sleep" for="sleep-7">7</label>
+                      <input
+                        type="radio"
+                        name="sleeproom-count"
+                        class="sleeproom-count"
+                        id="sleep-8"
+                      /><label class="label-sleep" for="sleep-8">8+</label>
+                    </div>
+                  </div>
+                  <div class="type-item">
+                    <div class="type-item-header">Giường</div>
+                    <div class="type-item-des">
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-0"
+                        checked
+                      />
+                      <label class="label-sleep any" for="bed-0">Bất kì</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-1"
+                      /><label class="label-sleep" for="bed-1">1</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-2"
+                      /><label class="label-sleep" for="bed-2">2</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-3"
+                      /><label class="label-sleep" for="bed-3">3</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-4"
+                      /><label class="label-sleep" for="bed-4">4</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-5"
+                      /><label class="label-sleep" for="bed-5">5</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-6"
+                      /><label class="label-sleep" for="bed-6">6</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-7"
+                      /><label class="label-sleep" for="bed-7">7</label>
+                      <input
+                        type="radio"
+                        name="bedroom-count"
+                        class="sleeproom-count"
+                        id="bed-8"
+                      /><label class="label-sleep" for="bed-8">8+</label>
+                    </div>
+                  </div>
+                  <div class="type-item">
+                    <div class="type-item-header">Phòng tắm</div>
+                    <div class="type-item-des">
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-0"
+                        checked
+                      />
+                      <label class="label-sleep any" for="bath-0">Bất kì</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-1"
+                      /><label class="label-sleep" for="bath-1">1</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-2"
+                      /><label class="label-sleep" for="bath-2">2</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-3"
+                      /><label class="label-sleep" for="bath-3">3</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-4"
+                      /><label class="label-sleep" for="bath-4">4</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-5"
+                      /><label class="label-sleep" for="bath-5">5</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-6"
+                      /><label class="label-sleep" for="bath-6">6</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-7"
+                      /><label class="label-sleep" for="bath-7">7</label>
+                      <input
+                        type="radio"
+                        name="bathroom-count"
+                        class="sleeproom-count"
+                        id="bath-8"
+                      /><label class="label-sleep" for="bath-8">8+</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-filter-item">
+                <div class="booking-filter-item-header">Loại nhà/phòng</div>
+                <div class="booking-filter-item-type-list house-type">
+                  <input type="checkbox" name="" id="home" />
+                  <label for="home" class="house-item">
+                    <div class="house-item-logo">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="bi bi-house-door"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="house-item-name">Nhà</div>
+                  </label>
+                  <input type="checkbox" id="apartment" />
+                  <label for="apartment" class="house-item">
+                    <div class="house-item-logo">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="bi bi-building"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"
+                        />
+                        <path
+                          d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="house-item-name">Căn hộ</div>
+                  </label>
+                  <input type="checkbox" id="guest-room" />
+                  <label for="guest-room" class="house-item">
+                    <div class="house-item-logo">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="bi bi-houses"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708L5.793 1Zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708L8.793 2Zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207l-4.5-4.5Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="house-item-name">Nhà khách</div>
+                  </label>
+                  <input type="checkbox" id="hotel" />
+                  <label for="hotel" class="house-item">
+                    <div class="house-item-logo">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="bi bi-buildings"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"
+                        />
+                        <path
+                          d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="house-item-name">Khách sạn</div>
+                  </label>
+                </div>
+              </div>
+              <div class="booking-filter-item">
+                <div class="booking-filter-item-header">Đồ dùng thiết yếu</div>
+                <div class="booking-filter-item-type-list things">
+                  <input id="wifi" type="checkbox" class="type-input" />
+                  <label for="wifi" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Wi-fi</div>
+                    </div>
+                  </label>
+                  <input id="stove" type="checkbox" class="type-input" />
+                  <label for="stove" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Bếp</div>
+                    </div>
+                  </label>
+                  <input id="washer" type="checkbox" class="type-input" />
+                  <label for="washer" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Máy giặt</div>
+                    </div>
+                  </label>
+                  <input id="dryer" type="checkbox" class="type-input" />
+                  <label for="dryer" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Máy sấy quần áo</div>
+                    </div>
+                  </label>
+                  <input
+                    id="air-conditioner"
+                    type="checkbox"
+                    class="type-input"
+                  />
+                  <label for="air-conditioner" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Điều hòa nhiệt độ</div>
+                    </div>
+                  </label>
+                  <input
+                    id="heating-system"
+                    type="checkbox"
+                    class="type-input"
+                  />
+                  <label for="heating-system" class="type-item">
+                    <div class="checkbox-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="type-text">
+                      <div class="type-header">Hệ thống sưởi</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="booking-filter-item" style="display: none">
+                <div class="booking-filter-item-header">Tùy chọn đặt phòng</div>
+                <div class="booking-filter-item-option-list">
+                  <div class="option-item">
+                    <div class="option-text">
+                      <div class="option-header">Đặt ngay</div>
+                      <div class="option-des">
+                        Nhà/phòng cho thuê bạn có thể đặt mà không cần chờ chủ
+                        nhà chấp thuận
+                      </div>
+                    </div>
+                    <input type="checkbox" id="book-now" />
+                    <label for="book-now" class="option-button">
+                      <div class="button-switch">
+                        <div class="switch-circle">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            class="bi bi-check2"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="option-item">
+                    <div class="option-text">
+                      <div class="option-header">Tự nhận phòng</div>
+                      <div class="option-des">
+                        Dễ dàng vào chỗ ở sau khi bạn đến
+                      </div>
+                    </div>
+                    <input type="checkbox" id="seft-checkin" />
+                    <label for="seft-checkin" class="option-button">
+                      <div class="button-switch">
+                        <div class="switch-circle">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            class="bi bi-check2"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label for="input-booking-room-filter" class="booking-filter-button"
+              >Tìm kiếm</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="booking__room--list grid">
+        <div class="row">
+          <a class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </a>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+          <div class="booking__room--list--item col l-3 m-6 c-12">
+            <div class="booking__room-list-picture">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-david-dibert-1299391.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/city/pexels-rachel-claire-4825701.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/animals/pexels-felix-mittermeier-2832077.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-stein-egil-liland-3408744.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/image/nature/pexels-zhang-kaiyv-1083515.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="booking__room--list--item--rate">
+              <img src="img/Star.png" alt="" />
+              <p>4.60 (280)</p>
+            </div>
+            <div class="booking__room--list--item--name">
+              Căn hộ tại Sơn Trà, Việt Nam
+            </div>
+            <div class="booking__room--list--item--des">
+              Toàn bộ nhà | Đà Nẵng
+            </div>
+            <div class="booking__room--list--item--prices">
+              <span>đ 1.000.000/</span>đêm
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="btn__moreroom"><button>Thêm nữa</button></div>
+    <section class="booking__banner">
+      <div class="booking__banner--header">
+        Nhận giảm giá cho kỳ nghỉ của bạn
+      </div>
+      <div class="booking__banner--sign-up">
+        <button>
+          <a
+            href="./sign-up.html"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: inherit;
+              text-decoration: none;
+              width: 100%;
+              height: 100%;
+            "
+            >Đăng ký ngay</a
+          >
+        </button>
+      </div>
+      <div class="booking__banner--des">
+        <div class="booking__banner--item">
+          <img src="./img/Frame (2).png" alt="" /><span>Giá tốt nhất</span>
+        </div>
+        <div class="booking__banner--item">
+          <img src="./img/Frame (2).png" alt="" /><span>Đề nghị miễn phí</span>
+        </div>
+        <div class="booking__banner--item">
+          <img src="./img/Frame (2).png" alt="" /><span
+            >Thanh toán nhanh và bảo mật</span
+          >
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="footer__content">
+        <div class="footer__content--left">
+          <div class="footer__content--left--header">
+            Khám phá thế giới cùng với Tai!
+          </div>
+          <div class="footer__content--left--des">
+            Chúng tôi cung cấp các dịch vụ phù hợp cho mọi nhu cầu du lịch của
+            bạn. Chủ nhà của chúng tôi rất tuyệt vời, sẵn sàng đáp ứng kỳ nghỉ
+            của bạn khi bạn tận hưởng kỳ nghỉ của mình mà không phải lo lắng.
+          </div>
+          <div class="footer__content--left--icon">© 2023 Tai.</div>
+        </div>
+        <div class="footer__content--right">
+          <div class="footer__content--right--infor">
+            <a href="./about-us.html" class="infor__item">Về chúng tôi</a>
+
+            <a href="./help.html" class="infor__item">Trợ giúp</a>
+            <a href="./privacy.html" class="infor__item">Chính sách riêng tư</a>
+            <label for="contact-input" class="infor__item">Liên hệ</label>
+          </div>
+          <div class="mail-des">Nhận thêm thông tin về chúng tôi</div>
+          <div class="footer__content--right--mail">
+            <form action="" style="display: flex">
+              <input
+                type="email"
+                placeholder="Nhập địa chỉ email của bạn"
+              /><button style="cursor: pointer">
+                Gửi <img src="./img/Frame (6).png" alt="" />
+              </button>
+            </form>
+          </div>
+          <div class="footer__content--right--icon">
+            <div class="footer__content--left--icon-onmobile">© 2023 Tai.</div>
+            <a href="https://twitter.com/home?lang=en" class="icon__item"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="#1D9BF0"
+                class="bi bi-twitter"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                /></svg
+            ></a>
+            <a href="https://www.facebook.com" class="icon__item"
+              ><img src="./assets/image/Facebook_f_logo_(2019).svg" alt=""
+            /></a>
+            <a
+              href="https://www.instagram.com"
+              class="icon__item"
+              style="background-color: unset"
+              ><img src="./assets/image/Instagram_logo_2016.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <input type="checkbox" id="contact-input" />
+      <label for="contact-input" class="info-contact-overlay"></label>
+      <div class="info-contact-detail">
+        <label for="contact-input" class="cover-detail-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </label>
+        <div class="detail-wrap">
+          <div class="cover-detail-header-contact">
+            <div class="detail-header-icon-contact">
+              <img src="./img/Group (4).png" alt="" />
+            </div>
+            <div class="detail-header-text-contact">
+              Nếu quý khách có thắc mắc, xin vui lòng liên hệ chúng tôi theo
+              thông tin dưới đây:
+            </div>
+          </div>
+          <div class="cover-detail-list">
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Email:</div>
+              <a
+                href="mailto: leductai9898@gmail.com"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                leductai9898@gmail.com
+              </a>
+            </div>
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Hotline:</div>
+              <a
+                href="tel: 0776455910"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                0776455910
+              </a>
+            </div>
+            <div class="cover-detail-item active">
+              <div class="detail-item-header-contact">Địa chỉ</div>
+              <div class="detail-item-text-contact">
+                A1 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội
+                <div class="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.046139559176!2d105.8478321!3d21.002194!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac740ba3819f%3A0x2b5ef5b01461f9e7!2zU8OibiB24bqtbiDEkeG7mW5nIFRyxrDhu51uZyDEkOG6oWkgaOG7jWMgQsOhY2ggS2hvYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1680714956256!5m2!1svi!2s"
+                    width="800"
+                    height="600"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/range_Plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="./library/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

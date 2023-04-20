@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trợ giúp - Tai</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/image/Group.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./library/bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/room_detail.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="./assets/css/room_detail_responsive.css" />
+    <link rel="stylesheet" href="./assets/css/help.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="row h-100">
+          <div class="col-lg-8 col-md-6 col-10 d-flex justify-content-start">
+            <a href="./index.html" class="icon d-lg-block">
+              <img src="./img/Group (4).png" alt="" />
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 d-none d-md-block d-flex justify-content-end"
+          >
+            <div class="row g-0">
+              <div class="col-5 d-flex align-items-center">
+                <div class="become-host" style="cursor: default">
+                  Trở thành chủ nhà
+                </div>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <div class="language d-flex gap-2 align-items-end">
+                  <div class="language-icon">
+                    <img src="./img/Group (5).png" alt="" />
+                  </div>
+                  <div class="language-des">VN</div>
+                </div>
+              </div>
+              <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="user-wrap">
+                  <div class="user">
+                    <div class="user-button">
+                      <svg
+                        width="16"
+                        height="12"
+                        viewBox="0 0 16 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33325 11H14.6666M1.33325 1H14.6666H1.33325ZM1.33325 6H7.99992H1.33325Z"
+                          stroke="#304659"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="user-icon">
+                      <svg
+                        width="32"
+                        height="31"
+                        viewBox="0 0 32 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                          fill="#304659"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="user__overlay"></div>
+                  <div class="user__menu">
+                    <a
+                      href="./sign-in.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-login"
+                      >Đăng nhập</a
+                    >
+                    <a
+                      href="./sign-up.html"
+                      class="user__menu-signup"
+                      style="color: inherit; text-decoration: none"
+                      >Đăng ký</a
+                    >
+                    <div class="user__menu-become-host" style="cursor: default">
+                      Cho thuê chỗ ở
+                    </div>
+                    <a
+                      href="./help.html"
+                      style="text-decoration: none; color: inherit"
+                      class="user__menu-help"
+                      >Trợ giúp</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label class="col-2 d-md-none menu-icon" for="mobile-menu">
+            <img src="./img/list.svg" alt="" />
+          </label>
+          <input class="input-mobile-menu" type="checkbox" id="mobile-menu" />
+          <label class="overlay-mobile" for="mobile-menu"></label>
+          <div class="menu">
+            <label class="close-mobile-menu" for="mobile-menu"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </label>
+            <div class="avatar">
+              <img src="./img/Frame (7).png" alt="" />
+              <p>Khách</p>
+            </div>
+            <ul class="menu-list">
+              <li><a href="./sign-in.html" class="menu-item">Đăng nhập</a></li>
+              <li>
+                <a href="./sign-up.html" class="menu-item end-user">Đăng ký</a>
+              </li>
+              <li><a class="menu-item">Trở thành chủ nhà</a></li>
+              <li class="menu-item-languages">
+                Ngôn ngữ: <span>Tiếng Việt</span>
+              </li>
+              <li><a href="./help.html" class="menu-item">Trợ giúp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="help__banner">
+      <div class="banner-header">
+        <p>Cần giúp đỡ ư? Chúng tôi đến giúp quý khách đây!</p>
+      </div>
+      <div class="banner-house">
+        <div class="house-icon">
+          <img src="./assets/image/building-svgrepo-com.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="help__content">
+        <div class="row">
+          <div class="col-4">
+            <div class="list-question">
+              <a href="#1" class="list-question-item">
+                <div class="question-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                    />
+                    <path
+                      d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
+                    />
+                  </svg>
+                </div>
+                <div class="question-text">Chi tiết đặt chỗ</div> </a
+              ><a href="#2" class="list-question-item">
+                <div class="question-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-x-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                    />
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </div>
+                <div class="question-text">Hủy bỏ</div></a
+              ><a href="#3" class="list-question-item">
+                <div class="question-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-newspaper"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"
+                    />
+                    <path
+                      d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"
+                    />
+                  </svg>
+                </div>
+                <div class="question-text">Thay đổi việc đặt chỗ</div></a
+              ><a href="#4" class="list-question-item">
+                <div class="question-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-bell"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                    />
+                  </svg>
+                </div>
+                <div class="question-text">Yêu cầu đặc biệt</div></a
+              ><a href="#5" class="list-question-item">
+                <div class="question-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-house-lock"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"
+                    />
+                    <path
+                      d="M10 13a1 1 0 0 1 1-1v-1a2 2 0 0 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"
+                    />
+                  </svg>
+                </div>
+                <div class="question-text">
+                  Đóng băng giá cả cho khách sạn
+                </div></a
+              ><a href="#6" class="list-question-item">
+                <div class="question-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-heart-pulse"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"
+                    />
+                    <path
+                      d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"
+                    />
+                  </svg>
+                </div>
+                <div class="question-text">COVID - 19</div></a
+              >
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="question-answer-list">
+              <div class="question-contact">
+                <div class="question-contact-text">
+                  Có câu trả lời nhanh, liên hệ với chỗ nghỉ hoặc bộ phận chăm
+                  sóc khách hàng <span>Tai</span>, v.v. với các tính năng trợ
+                  giúp tự phục vụ của chúng tôi.
+                </div>
+                <div class="question-contact-phone">
+                  <div class="contact-phone-icon">
+                    <img
+                      src="./assets/image/contact-us-joy-062022.ico"
+                      alt=""
+                    />
+                  </div>
+                  <a href="tel: 0776455910" class="contact-phone-number"
+                    >Liên hệ với Dịch vụ khách hàng Tai</a
+                  >
+                </div>
+              </div>
+              <div id="1" class="question-answer-item">
+                <div class="question-answer-header">Chi tiết đặt chỗ</div>
+                <div class="answer-list">
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-1" />
+                    <label for="answer-input-1" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Làm thế nào tôi có được thêm thông tin về phòng hoặc
+                          cơ sở vật chất của chỗ nghỉ?
+                        </div>
+                        <div class="answer-hide">
+                          Quý khách có thể tìm thấy chi tiết về chỗ nghỉ trong
+                          thư điện tử xác nhận của mình hoặc trên trang chi tiết
+                          chỗ nghỉ. Về bất cứ điều gì khác, quý khách cũng có
+                          thể liên hệ trực tiếp với chỗ nghỉ.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-2" />
+                    <label for="answer-input-2" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Khi nào tôi có thư điện tử xác nhận?
+                        </div>
+                        <div class="answer-hide">
+                          Trong hầu hết các trường hợp, quý khách sẽ nhận được
+                          thư điện tử này cùng với chứng từ đặt phòng (tệp PDF)
+                          trong vòng 30 phút kể từ khi đặt phòng. Nếu quý khách
+                          vẫn chưa nhận được nó sau thời gian đó thì vui lòng
+                          kiểm tra thư rác và/hoặc bộ lọc thư rác. Quý khách
+                          cũng có thể tải về hoặc gửi lại chứng từ đặt phòng
+                          trực tuyến.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-3" />
+                    <label for="answer-input-3" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi có thể kiểm tra chi tiết và trạng thái đặt phòng
+                          của mình ở đâu?
+                        </div>
+                        <div class="answer-hide">
+                          Quý khách luôn có thể xem chi tiết và trạng thái đặt
+                          phòng trực tuyến bằng cách đăng nhập và chọn "Đơn đặt
+                          phòng của tôi" từ lệnh đơn tài khoản. Nếu quý khách
+                          không biết chi tiết đăng nhập của mình thì quý khách
+                          có thể theo liên kết "Đơn đặt phòng của tôi" trong thư
+                          điện tử xác nhận của mình.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-4" />
+                  <label for="answer-input-4" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        <span>Tai</span> có thể gửi lại chứng từ đặt phòng cho
+                        tôi không?
+                      </div>
+                      <div class="answer-hide">
+                        <span>Tai</span> hiện cung cấp cho quý khách lựa chọn tự
+                        phục vụ. Chỉ bằng cách bấm vào liên kết tự phục vụ được
+                        cung cấp trong thư điện tử xác nhận, quý khách sẽ có thể
+                        gửi lại chứng từ đặt phòng.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-5" />
+                  <label for="answer-input-5" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi có thể thêm giường phụ/cũi em bé trong phòng mình
+                        không?
+                      </div>
+                      <div class="answer-hide">
+                        Sự sẵn có của giường phụ/cũi em bé tùy thuộc vào chỗ
+                        nghỉ. Khoản phí phụ thu cho trẻ em, gồm cả giường phụ,
+                        chưa bao gồm trong giá đặt phòng trừ khi được quy định.
+                        Vui lòng liên hệ trực tiếp với chỗ nghỉ để biết thông
+                        tin này.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-6" />
+                  <label for="answer-input-6" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Giá phòng gồm cả bữa sáng chưa?
+                      </div>
+                      <div class="answer-hide">
+                        Nếu gồm cả bữa sáng thì giá sẽ hiển thị "Gồm Cả Bữa
+                        Sáng" bên dưới loại phòng. Nếu nó không được đề cập thì
+                        khách sạn không bao gồm bữa sáng với ưu đãi phòng này.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-7" />
+                  <label for="answer-input-7" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi chưa nhận được xác nhận đặt chỗ và không thể xác
+                        định vị trí đơn đặt chỗ của mình trực tuyến.
+                      </div>
+                      <div class="answer-hide">
+                        Trong hầu hết các trường hợp, quý khách sẽ nhận được xác
+                        nhận đặt chỗ (tệp PDF) qua thư điện tử trong vòng 30
+                        phút sau khi hoàn tất việc đặt chỗ. Nếu quý khách vẫn
+                        chưa nhận được nó sau thời gian đó thì vui lòng kiểm tra
+                        thư rác và/hoặc thư mục thư rác. Quý khách cũng có thể
+                        xem chi tiết và trạng thái đặt chỗ trực tuyến bằng cách
+                        đăng nhập và chọn "Đơn đặt chỗ của tôi" từ lệnh đơn tài
+                        khoản. Nếu quý khách vẫn không thể xác định vị trí đơn
+                        đặt chỗ của mình và chưa nhận được xác nhận đặt chỗ sau
+                        24 giờ thì vui lòng liên hệ với chúng tôi.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-8" />
+                  <label for="answer-input-8" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Làm sao tôi có thể gửi xác nhận đặt phòng tới địa chỉ
+                        thư điện tử khác với địa chỉ tôi đã sử dụng để đặt
+                        phòng?
+                      </div>
+                      <div class="answer-hide">
+                        Quý khách sẽ nhận được một thư điện tử xác nhận đặt
+                        phòng tới địa chỉ thư điện tử mà quý khách đã cung cấp
+                        trong quá trình đặt phòng. Ngoài ra, quý khách có thể
+                        tìm được các đơn đặt phòng sắp tới, đã hủy bỏ và đã hoàn
+                        thành trên trang "[Đơn đặt chỗ của tôi]"
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div id="2" class="question-answer-item">
+                <div class="question-answer-header">Hủy bỏ</div>
+                <div class="answer-list">
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-9" />
+                    <label for="answer-input-9" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Làm thế nào tôi có thể hủy phòng của mình?
+                        </div>
+                        <div class="answer-hide">
+                          Quý khách có thể hủy phòng trực tuyến trên website
+                          hoặc ứng dụng <span>Tai</span>. Mọi phí hủy do chỗ
+                          nghỉ quyết định và được liệt kê trong chính sách hủy
+                          của quý khách.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-10" />
+                    <label for="answer-input-10" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi sẽ bị tính phí nếu tôi hủy phòng của mình chứ?
+                        </div>
+                        <div class="answer-hide">
+                          Nếu quý khách có đơn đặt phòng miễn phí hủy thì quý
+                          khách sẽ không phải trả phí hủy. Nếu đơn đặt phòng của
+                          quý khách không còn được miễn phí hủy hoặc không được
+                          hoàn trả thì quý khách có thể gánh chịu phí hủy. Mọi
+                          phí hủy cho việc đặt phòng đều do chỗ nghỉ quyết định.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-11" />
+                    <label for="answer-input-11" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Làm sao tôi biết việc đặt phòng của mình đã bị hủy bỏ
+                          hãy chưa?
+                        </div>
+                        <div class="answer-hide">
+                          Sau khi quý khách hủy phòng với chúng tôi, quý khách
+                          sẽ nhận được thư điện tử xác nhận việc hủy. Hãy kiểm
+                          tra hộp thư đến và thư mục rác của quý khách.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-12" />
+                  <label for="answer-input-12" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi có thể tìm chính sách hủy ở đâu?
+                      </div>
+                      <div class="answer-hide">
+                        Khi tìm phòng, quý khách sẽ có thể thấy các điều kiện
+                        đặt phòng và chính sách hủy cùng với thông tin khác về
+                        phòng. Quý khách cũng có thể tìm thông tin này trên
+                        chứng từ đặt phòng của mình.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-13" />
+                  <label for="answer-input-13" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Bao lâu tôi sẽ nhận lại tiền của mình?
+                      </div>
+                      <div class="answer-hide">
+                        Số tiền hoàn lại, nếu có, sẽ được xử lý ngay lập tức. Kể
+                        từ ngày xử lý/ngày hoàn tiền, ngân hàng có thể mất đến
+                        30 ngày làm việc để hoàn trả khoản tiền này hoặc cho đến
+                        chu kỳ thanh toán tiếp theo của quý khách. Khoản hoàn
+                        trả sẽ được ngân hàng chuyển đổi
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div id="3" class="question-answer-item">
+                <div class="question-answer-header">Thay đổi việc đặt chỗ</div>
+                <div class="answer-list">
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-14" />
+                    <label for="answer-input-14" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi muốn thay đổi ngày đặt phòng của mình. Làm sao tôi
+                          có thể làm vậy?
+                        </div>
+                        <div class="answer-hide">
+                          <span>Tai</span> hiện cung cấp cho quý khách lựa chọn
+                          tự phục vụ. Hãy chọn đơn đặt phòng và chọn ngày mới.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-15" />
+                    <label for="answer-input-15" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi muốn thay đổi tên của khách chính. Làm sao tôi có
+                          thể làm vậy?
+                        </div>
+                        <div class="answer-hide">
+                          <span>Tai</span> hiện cung cấp cho quý khách lựa chọn
+                          tự phục vụ. Hãy chọn đơn đặt phòng và cập nhật tên
+                          khách.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-16" />
+                    <label for="answer-input-16" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Làm thế nào để tôi kéo dài thời gian ở?
+                        </div>
+                        <div class="answer-hide">
+                          <span>Tai</span> hiện cung cấp cho quý khách lựa chọn
+                          tự phục vụ. Hãy chọn đơn đặt phòng và chọn ngày mới.
+                          Xin lưu ý rằng không phải tất cả các đơn đặt phòng sẽ
+                          cho phép thay đổi ngày đặt phòng.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-17" />
+                  <label for="answer-input-17" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Làm thế nào để tôi rút ngắn thời gian ở?
+                      </div>
+                      <div class="answer-hide">
+                        <span>Tai</span> hiện cung cấp cho quý khách lựa chọn tự
+                        phục vụ. Hãy chọn đơn đặt phòng và chọn ngày mới. Xin
+                        lưu ý rằng không phải tất cả các đơn đặt phòng sẽ cho
+                        phép thay đổi ngày đặt phòng.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div id="4" class="question-answer-item">
+                <div class="question-answer-header">Yêu cầu đặc biệt</div>
+                <div class="answer-list">
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-18" />
+                    <label for="answer-input-18" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Làm thế nào tôi có thể đưa ra một yêu cầu đặc biệt?
+                        </div>
+                        <div class="answer-hide">
+                          Quý khách có thể gửi yêu cầu đặc biệt của mình tới chỗ
+                          nghỉ bằng lựa chọn tự phục vụ. Xin lưu ý rằng mọi yêu
+                          cầu đặc biệt đều lệ thuộc vào khả năng cung cấp và
+                          không thể được <span>Tai</span> đảm bảo.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-19" />
+                    <label for="answer-input-19" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Làm thế nào thì tôi sẽ biết là một yêu cầu đặc biệt
+                          được xác nhận?
+                        </div>
+                        <div class="answer-hide">
+                          Tất cả các yêu cầu đặc biệt đều lệ thuộc vào khả năng
+                          đáp ứng và không thể được <span>Tai</span> bảo đảm.
+                          Khi nhận được, <span>Tai</span> sẽ chuyển yêu cầu đến
+                          chỗ nghỉ ưa thích của quý khách, và quý khách có thể
+                          theo dõi với chỗ nghỉ trước hoặc khi đến.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-20" />
+                    <label for="answer-input-20" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi có được yêu cầu nhận phòng sớm/trả phòng muộn
+                          không?
+                        </div>
+                        <div class="answer-hide">
+                          Quý khách có thể gửi yêu cầu đặc biệt của mình về việc
+                          nhận phòng sớm/trả phòng muộn tới chỗ nghỉ bằng lựa
+                          chọn tự phục vụ. Xin lưu ý rằng mọi yêu cầu đặc biệt
+                          đều lệ thuộc vào khả năng cung cấp và không thể được
+                          <span>Tai</span> đảm bảo.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-21" />
+                  <label for="answer-input-21" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi có thể chọn loại giường tôi muốn, yêu cầu phòng hút
+                        thuốc hoặc cấm hút thuốc, hoặc yêu cầu phòng nối liền
+                        nhau chứ?
+                      </div>
+                      <div class="answer-hide">
+                        Tất cả các yêu cầu đặc biệt đều lệ thuộc vào khả năng
+                        đáp ứng và không thể được <span>Tai</span> bảo đảm. Khi
+                        nhận được, <span>Tai</span> sẽ chuyển yêu cầu đến chỗ
+                        nghỉ ưa thích của quý khách, và quý khách có thể theo
+                        dõi với chỗ nghỉ trước hoặc khi đến
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div id="5" class="question-answer-item">
+                <div class="question-answer-header">
+                  Đóng băng Giá cả cho khách sạn
+                </div>
+                <div class="answer-list">
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-22" />
+                    <label for="answer-input-22" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Đóng băng Giá cả cho khách sạn: Chương trình hoạt động
+                          ra sao?
+                        </div>
+                        <div class="answer-hide">
+                          Không bao giờ bỏ lỡ ưu đãi khách sạn một lần nữa với
+                          Đóng băng Giá Khách sạn của Hopper! Chỉ cần trả một
+                          khoản tiền đặt cọc nhỏ để đóng băng giá phòng khách
+                          sạn trên <span>Tai</span>, và quay lại để đảm bảo việc
+                          đặt phòng của quý khách vào một ngày sau này. Nếu giá
+                          tăng, chúng tôi sẽ bù lấp giá tiền chênh lệch đến giới
+                          hạn tối đa được liệt kê trong chính sách Đóng băng Giá
+                          cả của quý khách. Nếu giá giảm thì quý khách trả mức
+                          giá thấp hơn! Khi quý khách hoàn tất việc đặt phòng,
+                          tiền đặt cọc sẽ được áp dụng cho giá thành sau cùng
+                          của đơn đặt phòng. Nếu quý khách không đặt phòng thì
+                          việc đóng băng sẽ hết hạn và tiền đặt cọc bị mất.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-23" />
+                    <label for="answer-input-23" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Khung thời gian đóng băng giá khách sạn của tôi là gì?
+                        </div>
+                        <div class="answer-hide">
+                          Khi quý khách mua Đóng băng Giá cả, chúng tôi sẽ đóng
+                          băng giá cả cho đến ngày hết hạn của quý khách, ngày
+                          này sẽ được quy định cho quý khách tại thời điểm mua.
+                          Quý khách có thể xem ngày hết hạn và các chi tiết khác
+                          trực tiếp trên website của <span>Tai</span> trên trang
+                          Đơn đặt chỗ của tôi.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-24" />
+                    <label for="answer-input-24" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi có thể đặt khách sạn khác hoặc ngày khác với việc
+                          đóng băng giá khách sạn của tôi không?
+                        </div>
+                        <div class="answer-hide">
+                          Một khi đã được mua, Đóng băng Giá cả không thể được
+                          áp dụng cho khách sạn hoặc ngày khác. Nếu không còn
+                          muốn mua phòng đó nữa, quý khách có thể để Đóng băng
+                          Giá cả hết hạn nhưng tiền đặt cọc là khoản mua không
+                          hoàn tiền.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-25" />
+                  <label for="answer-input-25" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Có giới hạn về số tiền một lần đóng băng giá khách sạn
+                        sẽ bù lấp không?
+                      </div>
+                      <div class="answer-hide">
+                        Có, giới hạn tăng giá được áp dụng cho mỗi lần Đóng băng
+                        Giá khách sạn. Nếu có sự tăng giá về đơn đặt phòng của
+                        quý khách, Hopper sẽ trả phí cho việc tăng đến giới hạn
+                        tối đa được chỉ báo tại thời điểm đặt phòng, chưa bao
+                        gồm thuế và phí dịch vụ. Giới hạn tăng giá được làm rõ
+                        trước khi mua và sẽ được trình bày lại trên màn hình xác
+                        nhận. Nếu giá tăng hơn giới hạn tối đa đã quy định, quý
+                        khách sẽ trả giá hiện hành trừ đi giới hạn tăng.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-26" />
+                  <label for="answer-input-26" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi có thể hủy đóng băng giá khách sạn của tôi không?
+                      </div>
+                      <div class="answer-hide">
+                        Tiền đặt cọc Đóng băng Giá cả là khoản mua không hoàn
+                        tiền. Nếu quý khách quyết định không quy đổi Đóng băng
+                        Giá cả trước khi hết hạn, tiền đặt cọc sẽ bị mất. Nếu
+                        quý khách đặt phòng từ một lần Đóng băng Giá cả hiện có
+                        và quý khách chọn hủy phòng của mình, xin lưu ý rằng
+                        tiền đặt cọc Đóng băng Giá cả vẫn không được hoàn.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-27" />
+                  <label for="answer-input-27" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Làm thế nào để tôi mua đóng băng giá khách sạn?
+                      </div>
+                      <div class="answer-hide">
+                        Khi lựa chọn phòng khách sạn, quý khách sẽ thấy lựa chọn
+                        đóng băng giá. Chỉ cần nhấn vào nút Đóng băng Giá cả và
+                        hoàn tất các bước để mua. Sau khi mua Đóng băng Giá cả,
+                        lúc ấy quý khách sẽ thấy nó trên website của
+                        <span>Tai</span> trên trang Đơn đặt chỗ của tôi.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-28" />
+                  <label for="answer-input-28" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Làm thế nào để tôi dùng đóng băng giá khách sạn của tôi?
+                      </div>
+                      <div class="answer-hide">
+                        Khi thanh toán tiền đặt cọc để đóng băng giá khách sạn,
+                        quý khách sẽ thấy Đóng băng Giá cả trên
+                        <span>Tai</span> trên trang Đơn đặt chỗ của tôi. <br />
+                        -- Phòng đóng băng giá của quý khách sẽ xuất hiện trong
+                        mục các đơn đặt chỗ sắp tới. Để hoàn tất việc đặt phòng
+                        Đóng băng Giá cả, hãy nhấn vào “Đặt phòng đóng băng giá
+                        của quý khách”. Xin lưu ý rằng nếu quý khách cố gắng đặt
+                        phòng từ bất kỳ khu vực nào khác trên nền tảng thì Đóng
+                        băng Giá cả của quý khách sẽ không được áp dụng. <br />
+                        -- Sau khi nhấn vào “Đặt phòng đóng băng giá của quý
+                        khách”, nó sẽ cho thấy chi tiết đặt phòng để quý khách
+                        xem lại trước khi mua <br />
+                        -- Một khi đã kiểm tra hết mọi thứ và đã sẵn sàng để đặt
+                        phòng, quý khách có thể bấm vào cuối đơn đặt phòng đóng
+                        băng giá của mình để thanh toán và đảm bảo phòng khách
+                        sạn của mình.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-29" />
+                  <label for="answer-input-29" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi nên làm gì nếu việc đặt phòng đóng băng giá khách
+                        sạn của tôi thất bại?
+                      </div>
+                      <div class="answer-hide">
+                        Nếu quý khách dùng Đóng băng Giá cả để đặt phòng khách
+                        sạn và việc đặt phòng thất bại do không sẵn có phòng,
+                        chúng tôi sẽ tự động bắt đầu hoàn tiền với Hopper và quý
+                        khách sẽ nhận được tiền đặt cọc trở lại vào phương thức
+                        thanh toán ban đầu.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-30" />
+                  <label for="answer-input-30" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi có thể được hoàn tiền đặt cọc đóng băng giá khách
+                        sạn của tôi không?
+                      </div>
+                      <div class="answer-hide">
+                        Trong hầu hết các trường hợp, tiền đặt cọc Đóng băng Giá
+                        cả là khoản mua không hoàn tiền. Điều này có nghĩa là
+                        nếu quý khách quyết định không hoàn tất việc đặt phòng,
+                        Đóng băng Giá cả sẽ hết hạn và tiền đặt cọc của quý
+                        khách sẽ bị mất. Nếu quý khách đặt phòng từ một lần Đóng
+                        băng Giá cả hiện có và quý khách chọn hủy phòng của
+                        mình, xin lưu ý rằng tiền đặt cọc Đóng băng Giá cả vẫn
+                        không được hoàn. Tuy nhiên, trong trường hợp hiếm hoi
+                        phát sinh một trong các tình huống dưới đây, quý khách
+                        có thể đủ điều kiện để được hoàn tiền đặt cọc Đóng băng
+                        Giá cả của mình: <br />- Nếu khách sạn mà quý khách mua
+                        Đóng băng Giá cả không còn phòng tại thời điểm đặt
+                        phòng. <br />- Nếu khách sạn hủy phòng của quý khách.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-31" />
+                  <label for="answer-input-31" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Tôi có thể mua đóng băng giá khách sạn cho hơn một phòng
+                        không?
+                      </div>
+                      <div class="answer-hide">
+                        Được. Quý khách có thể đóng băng nhiều phòng cùng một
+                        lúc. Chỉ cần chọn số lượng phòng quý khách muốn đóng
+                        băng giá cả trên trang thông tin chi tiết của chỗ nghỉ
+                        và bấm vào Đóng băng giá cả.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="answer-wrap">
+                  <input type="checkbox" id="answer-input-32" />
+                  <label for="answer-input-32" class="answer-item">
+                    <div class="answer-item-left">
+                      <div class="answer-display">
+                        Nếu giá khách sạn giảm sau khi mua đóng băng giá khách
+                        sạn thì giá thấp hơn có được thực hiện không?
+                      </div>
+                      <div class="answer-hide">
+                        Nếu quý khách đã sẵn sàng để hoàn tất đặt phòng Đóng
+                        băng Giá cả và giá của khách sạn thấp hơn giá quý khách
+                        đã đóng băng thì tiền đặt cọc sẽ được áp dụng cho mức
+                        giá khách sạn thấp hơn.
+                      </div>
+                    </div>
+                    <div class="answer-item-right">
+                      <div class="answer-item-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div id="6" class="question-answer-item">
+                <div class="question-answer-header">COVID-19</div>
+                <div class="answer-list">
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-33" />
+                    <label for="answer-input-33" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Tôi có thể đổi hoặc hủy chỗ của mình do COVID-19 được
+                          không?
+                        </div>
+                        <div class="answer-hide">
+                          Bất kỳ thay đổi nào quý khách muốn tạo ra cho việc đặt
+                          chỗ của mình phụ thuộc vào các chính sách đặt chỗ. Do
+                          tác động hiện nay của COVID-19, một số điểm đến nhất
+                          định tiếp tục áp đặt và sửa đổi những hạn chế đối với
+                          việc đi lại. Vui lòng kiểm tra để xem liệu điểm đến
+                          của quý khách có bất kỳ giới hạn đi lại nào không
+                          trước khi đặt chỗ với <span>Tai</span>.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-34" />
+                    <label for="answer-input-34" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Nếu tôi đã đặt chỗ ở qua <span>Tai</span> thì làm sao
+                          tôi có thể kiểm tra chính sách hủy của mình?
+                        </div>
+                        <div class="answer-hide">
+                          Nếu quý khách đang sử dụng ứng dụng
+                          <span>Tai</span> thì hãy đăng nhập và nhấn vào biểu
+                          tượng Đặt chỗ ở phía dưới màn hình. Sau đó, hãy chọn
+                          đơn đặt phòng của quý khách và chính sách hủy của quý
+                          khách sẽ được hiển thị trong Điều kiện đặt phòng. Nếu
+                          quý khách đang sử dụng website của
+                          <span>Tai</span> thì hãy đăng nhập và chọn Đơn đặt chỗ
+                          của tôi từ lệnh đơn. Sau đó, hãy bấm vào Sửa đơn đặt
+                          phòng và kiểm tra phần Điều kiện đặt phòng để biết
+                          chính sách hủy của quý khách.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="answer-wrap">
+                    <input type="checkbox" id="answer-input-35" />
+                    <label for="answer-input-35" class="answer-item">
+                      <div class="answer-item-left">
+                        <div class="answer-display">
+                          Nếu tôi đã đặt trọn gói qua <span>Tai</span> thì làm
+                          sao tôi có thể kiểm tra chính sách hủy của mình?
+                        </div>
+                        <div class="answer-hide">
+                          Nếu quý khách đã đặt trọn gói với chúng tôi thì quý
+                          khách sẽ nhận được một thư điện tử riêng về chỗ ở của
+                          mình. Xin lưu ý rằng các chính sách bỏ phí cho việc
+                          đặt chỗ ở của quý khách có thể khác với việc đặt vé
+                          máy bay của quý khách.
+                        </div>
+                      </div>
+                      <div class="answer-item-right">
+                        <div class="answer-item-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content--left">
+            <div class="footer__content--left--header">
+              Khám phá thế giới cùng với Tai!
+            </div>
+            <div class="footer__content--left--des">
+              Chúng tôi cung cấp các dịch vụ phù hợp cho mọi nhu cầu du lịch của
+              bạn. Chủ nhà của chúng tôi rất tuyệt vời, sẵn sàng đáp ứng kỳ nghỉ
+              của bạn khi bạn tận hưởng kỳ nghỉ của mình mà không phải lo lắng.
+            </div>
+            <div class="footer__content--left--icon">© 2023 Tai.</div>
+          </div>
+          <div class="footer__content--right">
+            <div class="footer__content--right--infor">
+              <a href="./about-us.html" class="infor__item">Về chúng tôi</a>
+
+              <a href="./help.html" class="infor__item">Trợ giúp</a>
+              <a href="./privacy.html" class="infor__item"
+                >Chính sách riêng tư</a
+              >
+              <label for="contact-input" class="infor__item">Liên hệ</label>
+            </div>
+            <div class="mail-des">Nhận thêm thông tin về chúng tôi</div>
+            <div class="footer__content--right--mail">
+              <form action="" style="display: flex">
+                <input
+                  type="email"
+                  placeholder="Nhập địa chỉ email của bạn"
+                /><button type="submit" style="cursor: pointer">
+                  Gửi <img src="./img/Frame (6).png" alt="" />
+                </button>
+              </form>
+            </div>
+            <div class="footer__content--right--icon">
+              <div class="footer__content--left--icon-onmobile">
+                © 2023 Tai.
+              </div>
+              <a href="https://twitter.com/home?lang=en" class="icon__item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#1D9BF0"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  /></svg
+              ></a>
+              <a href="https://www.facebook.com" class="icon__item"
+                ><img src="./assets/image/Facebook_f_logo_(2019).svg" alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com"
+                class="icon__item"
+                style="background-color: unset"
+                ><img src="./assets/image/Instagram_logo_2016.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <input type="checkbox" id="contact-input" />
+      <label for="contact-input" class="info-contact-overlay"></label>
+      <div class="info-contact-detail">
+        <label for="contact-input" class="cover-detail-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </label>
+        <div class="detail-wrap">
+          <div class="cover-detail-header-contact">
+            <div class="detail-header-icon-contact">
+              <img src="./img/Group (4).png" alt="" />
+            </div>
+            <div class="detail-header-text-contact">
+              Nếu quý khách có thắc mắc, xin vui lòng liên hệ chúng tôi theo
+              thông tin dưới đây:
+            </div>
+          </div>
+          <div class="cover-detail-list">
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Email:</div>
+              <a
+                href="mailto: leductai9898@gmail.com"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                leductai9898@gmail.com
+              </a>
+            </div>
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Hotline:</div>
+              <a
+                href="tel: 0776455910"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                0776455910
+              </a>
+            </div>
+            <div class="cover-detail-item active">
+              <div class="detail-item-header-contact">Địa chỉ</div>
+              <div class="detail-item-text-contact">
+                A1 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội
+                <div class="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.046139559176!2d105.8478321!3d21.002194!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac740ba3819f%3A0x2b5ef5b01461f9e7!2zU8OibiB24bqtbiDEkeG7mW5nIFRyxrDhu51uZyDEkOG6oWkgaOG7jWMgQsOhY2ggS2hvYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1680714956256!5m2!1svi!2s"
+                    width="800"
+                    height="600"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./library/bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/help.js"></script>
+  </body>
+</html>

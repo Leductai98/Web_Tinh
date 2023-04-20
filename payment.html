@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt phòng - Tai</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/image/Group.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./library/bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css"
+    />
+    <link rel="stylesheet" href="./assets/css/room_detail.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="./assets/css/room_detail_responsive.css" />
+    <link rel="stylesheet" href="./assets/css/payment.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="row h-100">
+          <div class="col-lg-8 col-md-6 col-10 d-flex justify-content-start">
+            <a href="./index.html" class="icon d-lg-block">
+              <img src="./img/Group (4).png" alt="" />
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 d-none d-md-block d-flex justify-content-end"
+          >
+            <div class="row g-0">
+              <div class="col-5 d-flex align-items-center">
+                <div class="become-host" style="cursor: default">
+                  Trở thành chủ nhà
+                </div>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <div class="language d-flex gap-2 align-items-end">
+                  <div class="language-icon">
+                    <img src="./img/Group (5).png" alt="" />
+                  </div>
+                  <div class="language-des">VN</div>
+                </div>
+              </div>
+              <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="user-wrap">
+                  <div class="user">
+                    <div class="user-button">
+                      <svg
+                        width="16"
+                        height="12"
+                        viewBox="0 0 16 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33325 11H14.6666M1.33325 1H14.6666H1.33325ZM1.33325 6H7.99992H1.33325Z"
+                          stroke="#304659"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="user-icon">
+                      <svg
+                        width="32"
+                        height="31"
+                        viewBox="0 0 32 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.2899 0.489258C7.64987 0.489258 0.637695 7.30525 0.637695 15.7035C0.637695 24.1018 7.64987 30.9178 16.2899 30.9178C24.9299 30.9178 31.942 24.1018 31.942 15.7035C31.942 7.30525 24.9299 0.489258 16.2899 0.489258ZM16.2899 5.05354C18.8881 5.05354 20.9855 7.09225 20.9855 9.61782C20.9855 12.1434 18.8881 14.1821 16.2899 14.1821C13.6916 14.1821 11.5942 12.1434 11.5942 9.61782C11.5942 7.09225 13.6916 5.05354 16.2899 5.05354ZM16.2899 26.6578C12.3768 26.6578 8.9177 24.7104 6.89856 21.7588C6.94552 18.7312 13.1594 17.0728 16.2899 17.0728C19.4047 17.0728 25.6342 18.7312 25.6812 21.7588C23.662 24.7104 20.2029 26.6578 16.2899 26.6578Z"
+                          fill="#304659"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="user__overlay"></div>
+                  <div class="user__menu">
+                    <a
+                      href="./sign-in.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-login"
+                      >Đăng nhập</a
+                    >
+                    <a
+                      href="./sign-up.html"
+                      style="color: inherit; text-decoration: none"
+                      class="user__menu-signup"
+                      >Đăng ký</a
+                    >
+                    <div class="user__menu-become-host" style="cursor: default">
+                      Cho thuê chỗ ở
+                    </div>
+                    <a
+                      href="./help.html"
+                      style="text-decoration: none; color: inherit"
+                      class="user__menu-help"
+                      >Trợ giúp</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label class="col-2 d-md-none menu-icon" for="mobile-menu">
+            <img src="./img/list.svg" alt="" />
+          </label>
+          <input class="input-mobile-menu" type="checkbox" id="mobile-menu" />
+          <label class="overlay-mobile" for="mobile-menu"></label>
+          <div class="menu">
+            <label class="close-mobile-menu" for="mobile-menu"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </label>
+            <div class="avatar">
+              <img src="./img/Frame (7).png" alt="" />
+              <p>Khách</p>
+            </div>
+            <ul class="menu-list">
+              <li><a href="./sign-in.html" class="menu-item">Đăng nhập</a></li>
+              <li>
+                <a href="./sign-up.html" class="menu-item end-user">Đăng ký</a>
+              </li>
+              <li><a href="" class="menu-item">Trở thành chủ nhà</a></li>
+              <li class="menu-item-languages">
+                Ngôn ngữ: <span>Tiếng Việt</span>
+              </li>
+              <li><a href="./help.html" class="menu-item">Trợ giúp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-7">
+          <div class="confirm-payment">
+            <div class="confirm-payment-header">Xác nhận và thanh toán</div>
+            <div class="confirm-payment-content">
+              <div class="content-header">Chuyến đi của bạn</div>
+              <div class="content-list">
+                <div class="content-item">
+                  <div class="item-text">
+                    <div class="item-header">Ngày</div>
+                    <div class="item-des">Ngày 08 - Ngày 13 tháng 5</div>
+                  </div>
+                  <div class="item-eidt">
+                    <label for="date">Chỉnh sửa</label>
+                    <input id="date" type="text" />
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-text">
+                    <div class="item-header">Khách</div>
+                    <div class="item-des">
+                      <span class="guest-adult-child">1 khách </span
+                      ><span class="guest-baby">, 1 em bé</span
+                      ><span class="guest-pet">, 1 thú cưng</span>
+                    </div>
+                  </div>
+                  <div class="item-eidt">
+                    <label for="guest-menu-input">Chỉnh sửa</label>
+                    <div class="guest-wrap">
+                      <input type="checkbox" name="" id="guest-menu-input" />
+                      <label
+                        class="guest-menu-overlay"
+                        for="guest-menu-input"
+                      ></label>
+
+                      <div class="guest-menu">
+                        <div class="guest-menu-header">Khách</div>
+                        <div class="guest-menu-des">
+                          Chỗ ở này cho phép tối đa 4 khách không tính em bé
+                        </div>
+                        <div class="guest-list">
+                          <div class="guest-item">
+                            <div class="item-left">
+                              <div class="item-left-header">Người lớn</div>
+                              <div class="item-left-des">
+                                Từ 13 tuổi trở lên
+                              </div>
+                            </div>
+                            <div class="item-right">
+                              <div class="item-right-reduce" data-type="adult">
+                                -
+                              </div>
+                              <div
+                                class="item-right-quantity"
+                                data-type="adult"
+                                data-max="5"
+                              >
+                                1
+                              </div>
+                              <div
+                                class="item-right-increase"
+                                data-type="adult"
+                              >
+                                +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="guest-item">
+                            <div class="item-left">
+                              <div class="item-left-header">Trẻ em</div>
+                              <div class="item-left-des">Độ tuổi 2 - 12</div>
+                            </div>
+                            <div class="item-right">
+                              <div class="item-right-reduce" data-type="child">
+                                -
+                              </div>
+                              <div
+                                class="item-right-quantity"
+                                data-type="child"
+                                data-max="4"
+                              >
+                                0
+                              </div>
+                              <div
+                                class="item-right-increase"
+                                data-type="child"
+                              >
+                                +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="guest-item">
+                            <div class="item-left">
+                              <div class="item-left-header">Em bé</div>
+                              <div class="item-left-des">Dưới 2 tuổi</div>
+                            </div>
+                            <div class="item-right">
+                              <div class="item-right-reduce" data-type="baby">
+                                -
+                              </div>
+                              <div
+                                class="item-right-quantity"
+                                data-type="baby"
+                                data-max="5"
+                              >
+                                0
+                              </div>
+                              <div class="item-right-increase" data-type="baby">
+                                +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="guest-item">
+                            <div class="item-left">
+                              <div class="item-left-header">Thú cưng</div>
+                              <div class="item-left-des"></div>
+                            </div>
+                            <div class="item-right">
+                              <div class="item-right-reduce" data-type="pet">
+                                -
+                              </div>
+                              <div
+                                class="item-right-quantity"
+                                data-type="pet"
+                                data-max="5"
+                              >
+                                0
+                              </div>
+                              <div class="item-right-increase" data-type="pet">
+                                +
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="guest-close-wrap">
+                          <label for="guest-menu-input" class="guest-menu-close"
+                            >Lưu lại</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-way">
+              <div class="payment-way-header">Chọn cách thanh toán</div>
+              <div class="payment-list">
+                <input type="radio" name="payment" id="all" />
+                <div class="payment-item">
+                  <div class="payment-item-first">
+                    <div class="payment-item-name">Trả toàn bộ</div>
+                    <div class="payment-item-input">
+                      <div class="payment-item-cost">đ 1,000,000</div>
+
+                      <label for="all" class="payment-item-check">
+                        <div class="payment-item-check-circle"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment-item-second">
+                    Thanh toán toàn bộ số tiền (đ 1,000,000) ngay bây giờ và thế
+                    là xong.
+                  </div>
+                </div>
+                <input type="radio" name="payment" id="half" />
+                <div class="payment-item">
+                  <div class="payment-item-first">
+                    <div class="payment-item-name">
+                      Trả ngay một phần, phần còn lại trả sau
+                    </div>
+                    <div class="payment-item-input">
+                      <div class="payment-item-cost">đ 1,000,000</div>
+
+                      <label for="half" class="payment-item-check">
+                        <div class="payment-item-check-circle"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment-item-second">
+                    Thanh toán ngay đ 500,000 và phần còn lại (đ 500,000) sẽ tự
+                    động được trừ vào cùng phương thức thanh toán này vào 23 thg
+                    4, 2023. Không phát sinh phụ phí.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-by">
+              <div class="payment-by-header">Thanh toán bằng</div>
+              <div class="payment-by-content">
+                <div class="payment-by-text">Thẻ tín dụng</div>
+                <div class="payment-by-number">
+                  <input type="number" name="" id="" placeholder=" " />
+                  <div class="card-number">Số thẻ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="info-menu">
+            <div class="room-info">
+              <div class="room-img">
+                <img
+                  src="./assets/image/city/pexels-pixabay-258154.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="room-text">
+                <div class="room-name">Bungalow</div>
+                <div class="room-type">Toàn bộ nhà</div>
+                <div class="room-location">Đà Nẵng</div>
+                <div class="room-rate">
+                  <img src="./assets/image/Star.jpg" alt="" /> <span>5.0</span>
+                </div>
+              </div>
+            </div>
+            <div class="cost-info">
+              <div class="cost-header">Chi tiết giá</div>
+              <div class="cost-content">
+                <div class="cost-item">
+                  <div class="cost-des">
+                    <span>đ 1,000,000</span> x
+                    <span class="count-night">1 đêm</span>
+                  </div>
+                  <div class="price">đ 1,000,000</div>
+                </div>
+                <div class="cost-item">
+                  <div class="cost-des">Phí vệ sinh</div>
+                  <div class="price">đ 200,000</div>
+                </div>
+                <div class="cost-item">
+                  <div class="cost-des">Phí dịch vụ <span>Tai</span></div>
+                  <div class="price">đ 100,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="total">
+              <div class="total-des">Tổng</div>
+              <div class="total-price">đ 1,300,000</div>
+            </div>
+            <div class="total-half">
+              <div class="half-item">
+                <div class="half-item-des">Phải trả bây giờ</div>
+                <div class="half-item-price">đ 650,000</div>
+              </div>
+              <div class="half-item">
+                <div class="half-item-des">Phải trả vào 23 thg 4, 2023</div>
+                <div class="half-item-price">đ 650,000</div>
+              </div>
+            </div>
+            <div class="pay">
+              <div class="pay-text">Thanh toán</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content--left">
+            <div class="footer__content--left--header">
+              Khám phá thế giới cùng với Tai!
+            </div>
+            <div class="footer__content--left--des">
+              Chúng tôi cung cấp các dịch vụ phù hợp cho mọi nhu cầu du lịch của
+              bạn. Chủ nhà của chúng tôi rất tuyệt vời, sẵn sàng đáp ứng kỳ nghỉ
+              của bạn khi bạn tận hưởng kỳ nghỉ của mình mà không phải lo lắng.
+            </div>
+            <div class="footer__content--left--icon">© 2023 Tai.</div>
+          </div>
+          <div class="footer__content--right">
+            <div class="footer__content--right--infor">
+              <a href="./about-us.html" class="infor__item">Về chúng tôi</a>
+
+              <a href="./help.html" class="infor__item">Trợ giúp</a>
+              <a href="./privacy.html" class="infor__item"
+                >Chính sách riêng tư</a
+              >
+              <label for="contact-input" class="infor__item">Liên hệ</label>
+            </div>
+            <div class="mail-des">Nhận thêm thông tin về chúng tôi</div>
+            <div class="footer__content--right--mail">
+              <form action="" style="display: flex">
+                <input
+                  type="email"
+                  placeholder="Nhập địa chỉ email của bạn"
+                /><button
+                  type="submit
+                "
+                  style="cursor: pointer"
+                >
+                  Gửi <img src="./img/Frame (6).png" alt="" />
+                </button>
+              </form>
+            </div>
+            <div class="footer__content--right--icon">
+              <div class="footer__content--left--icon-onmobile">
+                © 2023 Tai.
+              </div>
+              <a href="https://twitter.com/home?lang=en" class="icon__item"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#1D9BF0"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  /></svg
+              ></a>
+              <a href="https://www.facebook.com" class="icon__item"
+                ><img src="./assets/image/Facebook_f_logo_(2019).svg" alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com"
+                class="icon__item"
+                style="background-color: unset"
+                ><img src="./assets/image/Instagram_logo_2016.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <input type="checkbox" id="contact-input" />
+      <label for="contact-input" class="info-contact-overlay"></label>
+      <div class="info-contact-detail">
+        <label for="contact-input" class="cover-detail-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </label>
+        <div class="detail-wrap">
+          <div class="cover-detail-header-contact">
+            <div class="detail-header-icon-contact">
+              <img src="./img/Group (4).png" alt="" />
+            </div>
+            <div class="detail-header-text-contact">
+              Nếu quý khách có thắc mắc, xin vui lòng liên hệ chúng tôi theo
+              thông tin dưới đây:
+            </div>
+          </div>
+          <div class="cover-detail-list">
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Email:</div>
+              <a
+                href="mailto: leductai9898@gmail.com"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                leductai9898@gmail.com
+              </a>
+            </div>
+            <div class="cover-detail-item">
+              <div class="detail-item-header-contact">Hotline:</div>
+              <a
+                href="tel: 0776455910"
+                class="detail-item-text-contact"
+                style="color: blue"
+              >
+                0776455910
+              </a>
+            </div>
+            <div class="cover-detail-item active">
+              <div class="detail-item-header-contact">Địa chỉ</div>
+              <div class="detail-item-text-contact">
+                A1 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội
+                <div class="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.046139559176!2d105.8478321!3d21.002194!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac740ba3819f%3A0x2b5ef5b01461f9e7!2zU8OibiB24bqtbiDEkeG7mW5nIFRyxrDhu51uZyDEkOG6oWkgaOG7jWMgQsOhY2ggS2hvYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1680714956256!5m2!1svi!2s"
+                    width="800"
+                    height="600"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pop-up-list"></div>
+    <div class="payment-success-overlay"></div>
+    <div class="success-wrap">
+      <div class="payment-success">
+        <div class="success-icon">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </div>
+        <div class="success-content">Thanh toán thành công</div>
+      </div>
+      <div class="success-nav">
+        <a href="./index.html" class="back">Trở về trang chủ</a>
+        <a href="./manage.html" class="manage">Đến trang quản lý</a>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./library/bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./assets/js/range_Plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/payment.js"></script>
+  </body>
+</html>

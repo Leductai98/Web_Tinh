@@ -1,0 +1,543 @@
+:root {
+  --background-color: #3a6ad5;
+  --primary-color: white;
+  --text-color: #304659;
+  --placecholdeer-color: #696f8c;
+  --border-bottom-color: #9fa3b4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer__content{width: 100%;}
+.help__banner {
+  height: fit-content;
+  background-image: url(../image/help-background.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: #3a6ad5;
+}
+.banner-header {
+  padding-top: 20px;
+}
+.banner-header p {
+  font-size: 28px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+.banner-house {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.house-icon img {
+  margin-top: 20px;
+  width: 100px;
+  object-fit: contain;
+  color: white;
+}
+.help__content {
+}
+.list-question {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+}
+.list-question-item {
+  display: flex;
+  text-decoration: none;
+  color: var(--placecholdeer-color);
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.question-answer-list {
+  background-color: #ccc8c849;
+  padding:20px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.question-contact {
+  color: white;
+  background-color: rgb(36, 69, 124);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+}
+.question-contact-phone {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: fit-content;
+}
+.contact-phone-number {
+  width: fit-content;
+  padding: 0 20px;
+  background-color: white;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.contact-phone-number:hover {
+  color: white;
+  background-color: var(--background-color);
+}
+.contact-phone-icon {
+  width: 80px;
+}
+.question-answer-item {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+}
+.question-answer-header {
+  font-size: 24px;
+  line-height: 30px;
+}
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.answer-item {background-color: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 15px #00000038;
+  padding: 30px;
+  cursor: pointer;
+  gap: 10px;
+}
+.answer-item:hover {
+  box-shadow: 0 2px 15px 2px #00000054;
+}
+
+.answer-item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.answer-display,
+.answer-hide {
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.9;
+}
+.answer-hide {
+  display: none;
+}
+span {
+  color: var(--background-color);
+}
+.answer-item-right {
+  display: flex;
+  align-items: flex-start;
+  line-height: 22px;
+  justify-content: flex-end;
+}
+.answer-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.1s linear;
+}
+#answer-input-1,
+#answer-input-2,
+#answer-input-3,
+#answer-input-4,
+#answer-input-5,
+#answer-input-6,
+#answer-input-7,
+#answer-input-8,
+#answer-input-9,
+#answer-input-10,
+#answer-input-11,
+#answer-input-12,
+#answer-input-13,
+#answer-input-14,
+#answer-input-15,
+#answer-input-16,
+#answer-input-17,
+#answer-input-18,
+#answer-input-19,
+#answer-input-20,
+#answer-input-21,
+#answer-input-22,
+#answer-input-23,
+#answer-input-24,
+#answer-input-25,
+#answer-input-26,
+#answer-input-27,
+#answer-input-28,
+#answer-input-29,
+#answer-input-30,
+#answer-input-31,
+#answer-input-32,
+#answer-input-33,
+#answer-input-34,
+#answer-input-35 {
+  display: none;
+}
+#answer-input-1:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-1:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-1:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-2:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-2:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-2:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-3:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-3:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-3:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-4:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-4:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-4:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-5:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-5:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-5:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-6:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-6:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-6:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-7:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-7:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-7:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-8:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-8:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-8:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-9:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-9:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-9:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-10:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-10:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-10:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-11:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-11:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-11:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-12:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-12:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-12:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-13:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-13:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-13:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-14:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-14:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-14:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-15:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-15:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-15:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-16:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-16:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-16:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-17:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-17:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-17:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-18:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-18:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-18:checked ~ .answer-item {
+  cursor: default;
+}
+
+#answer-input-19:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-19:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-19:checked ~ .answer-item {
+  cursor: default;
+}
+
+#answer-input-20:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-20:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-20:checked ~ .answer-item {
+  cursor: default;
+}
+
+#answer-input-21:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-21:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-21:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-22:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-22:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-22:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-23:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-23:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-23:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-14:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-14:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-14:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-25:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-25:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-25:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-26:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-26:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-26:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-27:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-27:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-27:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-28:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-28:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-28:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-29:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-29:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-29:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-30:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-30:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-30:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-31:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-31:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-31:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-32:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-32:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-32:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-33:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-33:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-33:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-34:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-34:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-34:checked ~ .answer-item {
+  cursor: default;
+}
+#answer-input-35:checked ~ .answer-item .answer-item-left .answer-hide {
+  display: block;
+}
+#answer-input-35:checked ~ .answer-item .answer-item-right .answer-item-icon {
+  cursor: pointer;
+  transform: rotateZ(180deg);
+}
+#answer-input-35:checked ~ .answer-item {
+  cursor: default;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký - Tai</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/image/Group.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./library/bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/sign-up.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-icon">
+          <a href="./index.html" class="nav__icon">
+            <img src="./img/Group.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        class="row signup-wrap justify-content-center justify-content-lg-start"
+      >
+        <div class="col-12 col-lg-5 signup-content">
+          <div class="signup-header">Đăng ký</div>
+          <div class="signup-form-wrap">
+            <form action="" class="signup-form">
+              <div class="input-mail">
+                <label for="email">Địa chỉ email <span></span></label
+                ><input
+                  type="email"
+                  id="email"
+                  placeholder="Nhập địa chỉ email"
+                />
+              </div>
+              <div class="input-pass">
+                <label for="new-password">Mật khẩu <span></span></label>
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    id="new-password"
+                    placeholder="Nhập mật khẩu"
+                  />
+                  <div class="icon-password">
+                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-off-outline" class="active"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="input-pass-again">
+                <label for="pass-again">Nhập lại mật khẩu <span></span></label>
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    name=""
+                    id="pass-again"
+                    placeholder="Nhập lại mật khẩu"
+                  />
+                  <div class="icon-password">
+                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-off-outline" class="active"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <button type="submit">Đăng ký</button>
+            </form>
+          </div>
+          <div class="have-acount">
+            <div class="acount-text">Bạn đã có tài khoản?</div>
+            <a
+              href="./sign-in.html
+                "
+              class="acount-btn"
+              >Đăng nhập</a
+            >
+          </div>
+        </div>
+        <div class="background d-none d-lg-block">
+          <img src="./assets/image/nature/pexels-pixabay-33545.webp" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="background2 d-block d-lg-none">
+      <img src="./assets/image/nature/pexels-pixabay-33545.webp" alt="" />
+    </div>
+    <div class="pop-up-overlay"></div>
+    <div class="pop-up">
+      <div class="toast-icon">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </div>
+      <div class="toast-content">Đăng ký thành công</div>
+    </div>
+    <div class="toast-list"></div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./library/bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/sign-up.js"></script>
+  </body>
+</html>
