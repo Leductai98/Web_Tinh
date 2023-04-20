@@ -4,7 +4,8 @@ if (localStorage.getItem("login") != null) {
 }
 let user = document.getElementsByClassName("user")[0];
 let userOverLay = document.querySelector(".user__overlay");
-let userMenu = document.getElementsByClassName("user__menu")[0];let userMenuMobile = document.querySelector(".menu");
+let userMenu = document.getElementsByClassName("user__menu")[0];
+let userMenuMobile = document.querySelector(".menu");
 const renderUserMenu = () => {
   if (userLogin.length != 0) {
     userMenu.innerHTML = `
@@ -99,7 +100,6 @@ const renderUserMenu = () => {
 };
 renderUserMenu();
 
-
 user.onclick = () => {
   user.classList.toggle("active");
   userMenu.classList.toggle("user__display-flex");
@@ -121,7 +121,7 @@ let manageList = document.querySelector(".manage-list");
 const renderFavoriteList = () => {
   let userLogin = JSON.parse(localStorage.getItem("login"));
   let favoriteList = [];
-  if (localStorage.getItem("payment") != []) {
+  if (localStorage.getItem("favorite") != null) {
     favoriteList = JSON.parse(localStorage.getItem("favorite"));
   }
   if (favoriteList.length >= 1) {

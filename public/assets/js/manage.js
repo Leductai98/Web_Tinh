@@ -123,7 +123,7 @@ let manageList = document.querySelector(".manage-list");
 const renderPaymentList = () => {
   let userLogin = JSON.parse(localStorage.getItem("login"));
   let paymentList = [];
-  if (localStorage.getItem("payment") != []) {
+  if (localStorage.getItem("payment") != null) {
     paymentList = JSON.parse(localStorage.getItem("payment"));
   }
   if (paymentList.length >= 1) {
