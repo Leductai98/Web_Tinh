@@ -22,17 +22,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: var(--text-color);
-  background: #373b44; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: white;
 }
 input {
   width: auto;
@@ -227,10 +217,15 @@ button {
 
 .toast-error {
   width: 300px;
-  border: 1px solid red;
-  border-left: 20px solid red;
+   border: 1px solid rgb(210, 35, 6);
+  border-radius: 5px;
+  border-left: 20px solid rgb(210, 35, 6);
   background-color: white;
   display: flex;
+    padding: 20px;
+  padding-left: 0;
+  padding-right: 30px;
+  gap:5px;
   align-items: center;
   position: relative;
   height: 80px;
@@ -241,7 +236,7 @@ button {
   transform: translateX(0);
 }
 .toast-error-icon {
-  color: red;
+  color: rgb(210, 35, 6);
   width: 44px;
   text-align: center;
   font-weight: 700;

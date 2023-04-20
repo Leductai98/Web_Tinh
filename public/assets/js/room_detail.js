@@ -1145,21 +1145,47 @@ const waitGetRoomInfo = async () => {
       let pet = Number(quantity[3].innerHTML);
       if (userLogin.length != 0) {
         if (dayIn.value != "" && dayOut.value != "") {
-          let roomInfo = {
-            infoId: idRoom,
-            infoMaxGuest: maxGuestNum,
-            infoDate: date,
-            infoPrice: price,
-            infoAdult: adult,
-            infoChild: child,
-            infoMaxBaby: 5,
-            infoBaby: baby,
-            infoMaxPet: 5,
-            infoPet: pet,
-            infoLink: window.location.href,
-          };
-          roomOrder = roomInfo;
-          localStorage.setItem("roomOrder", JSON.stringify(roomOrder));
+          let x = new Date();
+          if (Date.parse(dayIn.value) < Date.parse(x)) {
+            e.preventDefault();
+            let toastList = document.querySelector(".pop-up-list");
+
+            let toast = document.createElement("div");
+            toast.classList.add("pop-up", "active");
+            toast.innerHTML = `<div class="toast-icon">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </div>
+        <div class="toast-content">Ngày nhận phòng không phù hợp</div>
+        <div class="toast-close">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>`;
+            toastList.appendChild(toast);
+            let closeToast = document.querySelector(".toast-close");
+            toast.onclick = (e) => {
+              if (e.target.closest(".toast-close"))
+                toastList.removeChild(toast);
+              clearTimeout(removeToast);
+            };
+            let removeToast = setTimeout(() => {
+              toastList.removeChild(toast);
+            }, 1000);
+          } else {
+            let roomInfo = {
+              infoId: idRoom,
+              infoMaxGuest: maxGuestNum,
+              infoDate: date,
+              infoPrice: price,
+              infoAdult: adult,
+              infoChild: child,
+              infoMaxBaby: 5,
+              infoBaby: baby,
+              infoMaxPet: 5,
+              infoPet: pet,
+              infoLink: window.location.href,
+            };
+            roomOrder = roomInfo;
+            localStorage.setItem("roomOrder", JSON.stringify(roomOrder));
+          }
         } else {
           e.preventDefault();
           let toastList = document.querySelector(".pop-up-list");

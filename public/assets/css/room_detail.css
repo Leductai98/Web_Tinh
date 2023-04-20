@@ -85,7 +85,6 @@ body {
   align-items: flex-end;
   justify-content: flex-end;
   gap: 10px;
-  
 }
 .share-text,
 .save-text {
@@ -1607,14 +1606,17 @@ span.flatpickr-weekday {
   display: flex;
   position: fixed;
   align-items: center;
-  justify-content: flex-start;
+  gap: 5px;
   padding: 20px;
+  padding-left: 0;
+  padding-right: 30px;
   top: 10px;
-  width: 350px;
+  width: 300px;
   height: fit-content;
   right: 0;
-  border: 1px solid red;
-  border-left: 20px solid red;
+  border: 1px solid rgb(210, 35, 6);
+  border-radius: 5px;
+  border-left: 20px solid rgb(210, 35, 6);
   transform: translateX(150%);
   transition: all 0.3s ease;
   z-index: 999;
@@ -1623,7 +1625,7 @@ span.flatpickr-weekday {
   transform: translateX(0);
 }
 .toast-icon {
-  color: red;
+  color: rgb(210, 35, 6);
   width: 44px;
   text-align: center;
   font-weight: 700;
