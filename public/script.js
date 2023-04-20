@@ -883,7 +883,7 @@ getRoom(urlRoom);
 //filter-menu-type
 
 let filterListType = document.querySelector(".filter__list");
-let filterList = document.getElementsByClassName("filter__item");
+
 const renderFilter = (data) => {
   let htmlCode = ``;
   data.map((item) => {
@@ -974,6 +974,7 @@ const waitFilter = async () => {
   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
 </svg>`;
   }*/
+  let filterList = document.getElementsByClassName("filter__item");
   Array.from(filterList).map((item1) => {
     item1.onclick = () => {
       Array.from(filterList).forEach((item2) => {
@@ -1037,6 +1038,7 @@ let hotelType = document.querySelector("#hotel");
 let thingsList = document.querySelectorAll(
   ".booking-filter-item-type-list.things input"
 );
+let filterList = document.getElementsByClassName("filter__item");
 let bookingFilterBtn = document.querySelector(".booking-filter-button");
 const getRoomInfoSearch = async (API) => {
   const res = await axios.get(API);

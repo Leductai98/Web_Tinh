@@ -1623,7 +1623,7 @@ const renderRoomInfo = (item) => {
                   <div class="info-cancel">
                     <div class="cancel-header">Chính sách hủy</div>
                     <div class="cancel-des">
-                      Bạn không được hoàn tiền nếu hủy phòng này. <br />
+                      Bạn được hoàn tiền nếu hủy phòng này hay không sẽ phụ thuộc vào chính sách của chủ nhà. <br />
                       Hãy đọc toàn bộ chính sách hủy của Chủ nhà.
                     </div>
                     <label for="cancel-input" class="cancel-more">
@@ -1667,7 +1667,7 @@ const renderRoomInfo = (item) => {
                             Hủy muộn nhất vào ngày
                           </div>
                           <div class="detail-item-content">
-                            <div class="detail-item-date">2023/04/07</div>
+                            <div class="detail-item-date">${new Date().toLocaleDateString()}</div>
                             <div class="detail-item-text">
                               Hoàn tiền đầy đủ: Được hoàn lại 100% số tiền bạn đã
                               thanh toán.
