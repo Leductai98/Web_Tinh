@@ -303,6 +303,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .room-name {
   font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .room-type {
 }

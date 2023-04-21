@@ -43,7 +43,7 @@ label {
 .signup-content {
   margin-top: 40px;
   margin-bottom: 40px;
-  width: 100%;
+  width: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;

@@ -773,11 +773,13 @@ inputLocationMobile.oninput = () => {
 flatpickr("#start", {
   allowInput: true,
   plugins: [new rangePlugin({ input: "#end" })],
+  minDate: "today",
 });
 
 flatpickr("#input-start-end", {
   allowInput: true,
   mode: "range",
+  minDate: "today",
 });
 
 const urlFilter = `https://api-sandy-zeta.vercel.app/filter`;

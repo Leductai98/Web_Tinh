@@ -114,10 +114,22 @@ window.onclick = (e) => {
   }
 };
 //calendar
+let today = new Date().toISOString().slice(0, 10);
+let roomInfo = JSON.parse(localStorage.getItem("roomOrder"));
 flatpickr("#date", {
   mode: "range",
   allowInput: true,
   showMonths: 1,
+  minDate:
+    Date.parse(roomInfo.validDayStart) >= Date.parse(today)
+      ? roomInfo.validDayStart
+      : today,
+  enable: [
+    {
+      from: roomInfo.validDayStart,
+      to: roomInfo.validDayEnd,
+    },
+  ],
 });
 
 //guest-menu
@@ -299,7 +311,6 @@ Array.from(reduceBtn).forEach((item) => {
   };
 });
 
-let roomInfo = JSON.parse(localStorage.getItem("roomOrder"));
 let idRoom = roomInfo.infoId;
 
 //input-date
@@ -418,7 +429,7 @@ let paymentInfo = [];
 if (localStorage.getItem("payment") != null) {
   paymentInfo = JSON.parse(localStorage.getItem("payment"));
 }
-console.log(paymentInfo);
+
 let priceInfo = ``;
 const waitGetRoomInfo = async () => {
   await getInfoRoom(urlRoomInfo);
@@ -512,16 +523,13 @@ let toastList = document.querySelector(".pop-up-list");
 let success = document.querySelector(".success-wrap");
 let succesOverlay = document.querySelector(".payment-success-overlay");
 btnPay.onclick = () => {
-  if (
-    Date.parse(inputStartEnd.value.split(" ")[0]) <
-    Date.parse(new Date().toLocaleDateString())
-  ) {
+  if (inputStartEnd.value.split(" ").length < 3) {
     let toast = document.createElement("div");
     toast.classList.add("pop-up", "active");
     toast.innerHTML = `<div class="toast-icon">
           <ion-icon name="close-circle-outline"></ion-icon>
         </div>
-        <div class="toast-content">Ngày nhận phòng không phù hợp</div>
+        <div class="toast-content">Vui lòng chọn ngày trả phòng</div>
         <div class="toast-close">
           <ion-icon name="close-outline"></ion-icon>
         </div>`;

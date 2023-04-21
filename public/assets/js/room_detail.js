@@ -562,6 +562,8 @@ window.onload = () => {
 //render-info
 const urlRoomInfo = `https://api-sandy-zeta.vercel.app/room-list`;
 const urlRoomInfoPicture = `https://api-sandy-zeta.vercel.app`;
+let validDayStart = ``;
+let validDayEnd = ``;
 
 const getRoomInfo = async (id) => {
   try {
@@ -575,6 +577,8 @@ const getRoomInfo = async (id) => {
     statusRoom = `${data.status}`;
     roomName = `${data.name}`;
     roomPrice = `${data.price}`;
+    validDayStart = `${data.start}`;
+    validDayEnd = `${data.end}`;
     renderRoomInfo(data);
   } catch (err) {
     console.log(err);
@@ -676,14 +680,33 @@ const waitGetRoomInfo = async () => {
     },
   });
   //calendar
+  let today = new Date().toISOString().slice(0, 10);
+
   flatpickr("#myID", {
     mode: "range",
     allowInput: true,
     inline: true,
     showMonths: 2,
+    minDate:
+      Date.parse(validDayStart) >= Date.parse(today) ? validDayStart : today,
+    enable: [
+      {
+        from: validDayStart,
+        to: validDayEnd,
+      },
+    ],
   });
   flatpickr("#in", {
     allowInput: true,
+    allowInvalidPreload: true,
+    minDate:
+      Date.parse(validDayStart) >= Date.parse(today) ? validDayStart : today,
+    enable: [
+      {
+        from: validDayStart,
+        to: validDayEnd,
+      },
+    ],
     plugins: [new rangePlugin({ input: "#out" })],
   });
   let guest = document.querySelector(".guest");
@@ -970,7 +993,7 @@ const waitGetRoomInfo = async () => {
     let resultIn = dayIn.value;
     let result = dayInOut.value;
     timeMobileIn.innerText = resultIn;
-    if (result == "" || result.includes("to") == false) {
+    if (result == "" || result.includes("đến") == false) {
       dayInOut.value = resultIn;
     } else if (result.split(" ").length <= 2) {
       let text = result.split(" ");
@@ -1004,7 +1027,7 @@ const waitGetRoomInfo = async () => {
       dayOut.classList.remove("disabled");
       timeMobileOut.innerText = resultOut;
       if (result.split(" ").length <= 1) {
-        dayInOut.value += " " + "to" + " " + resultOut;
+        dayInOut.value += " " + "đến" + " " + resultOut;
       } else {
         let text = result.split(" ");
         text[2] = resultOut;
@@ -1145,47 +1168,23 @@ const waitGetRoomInfo = async () => {
       let pet = Number(quantity[3].innerHTML);
       if (userLogin.length != 0) {
         if (dayIn.value != "" && dayOut.value != "") {
-          let x = new Date();
-          if (Date.parse(dayIn.value) < Date.parse(x.toLocaleDateString())) {
-            e.preventDefault();
-            let toastList = document.querySelector(".pop-up-list");
-
-            let toast = document.createElement("div");
-            toast.classList.add("pop-up", "active");
-            toast.innerHTML = `<div class="toast-icon">
-          <ion-icon name="close-circle-outline"></ion-icon>
-        </div>
-        <div class="toast-content">Ngày nhận phòng không phù hợp</div>
-        <div class="toast-close">
-          <ion-icon name="close-outline"></ion-icon>
-        </div>`;
-            toastList.appendChild(toast);
-            let closeToast = document.querySelector(".toast-close");
-            toast.onclick = (e) => {
-              if (e.target.closest(".toast-close"))
-                toastList.removeChild(toast);
-              clearTimeout(removeToast);
-            };
-            let removeToast = setTimeout(() => {
-              toastList.removeChild(toast);
-            }, 1000);
-          } else {
-            let roomInfo = {
-              infoId: idRoom,
-              infoMaxGuest: maxGuestNum,
-              infoDate: date,
-              infoPrice: price,
-              infoAdult: adult,
-              infoChild: child,
-              infoMaxBaby: 5,
-              infoBaby: baby,
-              infoMaxPet: 5,
-              infoPet: pet,
-              infoLink: window.location.href,
-            };
-            roomOrder = roomInfo;
-            localStorage.setItem("roomOrder", JSON.stringify(roomOrder));
-          }
+          let roomInfo = {
+            infoId: idRoom,
+            infoMaxGuest: maxGuestNum,
+            infoDate: date,
+            infoPrice: price,
+            infoAdult: adult,
+            infoChild: child,
+            infoMaxBaby: 5,
+            infoBaby: baby,
+            infoMaxPet: 5,
+            infoPet: pet,
+            infoLink: window.location.href,
+            validDayStart,
+            validDayEnd,
+          };
+          roomOrder = roomInfo;
+          localStorage.setItem("roomOrder", JSON.stringify(roomOrder));
         } else {
           e.preventDefault();
           let toastList = document.querySelector(".pop-up-list");

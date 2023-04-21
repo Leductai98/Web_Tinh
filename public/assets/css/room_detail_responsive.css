@@ -88,9 +88,10 @@
   .flatpickr-calendar {
     width: 309px !important;
   }
-  .flatpickr-weekdays {
+  .info-date .flatpickr-weekdays {
     width: 50%;
   }
+  
   .picture-big {
     height: 386px;
   }
