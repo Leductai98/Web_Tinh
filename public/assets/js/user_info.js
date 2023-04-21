@@ -138,7 +138,7 @@ const renderUser = () => {
                       <div class="user-name-edit">
                         <div class="name-des">
                           <div class="name-header">Tên người dùng</div>
-                          <input type="text" id="name-input" value="${userLogin.name}" />
+                          <input type="text" id="name-input" value="${userLogin.name}" autocomplete="off" /> 
                         </div>
                         <div class="name-edit">Lưu</div>
                       </div>`;

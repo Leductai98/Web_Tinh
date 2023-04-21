@@ -1872,6 +1872,7 @@ const renderRoomInfo = (item) => {
                       id="myID"
                       type="text"
                       placeholder="Chọn ngày"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
@@ -1922,6 +1923,7 @@ const renderRoomInfo = (item) => {
                         name=""
                         id="in"
                         placeholder="Thêm ngày"
+                        autocomplete="off"
                       />
                     </div>
                     <div class="time-check-out">
@@ -1934,6 +1936,7 @@ const renderRoomInfo = (item) => {
                         id="out"
                         class="input__out"
                         placeholder="Thêm ngày"
+                        autocomplete="off"
                       />
                     </div>
                   </div>
