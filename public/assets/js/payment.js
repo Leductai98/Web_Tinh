@@ -598,7 +598,7 @@ btnPay.onclick = () => {
         toast.innerHTML = `<div class="toast-icon">
           <ion-icon name="close-circle-outline"></ion-icon>
         </div>
-        <div class="toast-content">Mã số thẻ sai</div>
+        <div class="toast-content">Nhập số thẻ: 123456</div>
         <div class="toast-close">
           <ion-icon name="close-outline"></ion-icon>
         </div>`;
