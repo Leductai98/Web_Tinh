@@ -1156,7 +1156,7 @@ const waitGetRoomInfo = async () => {
       };
       let removeToast = setTimeout(() => {
         toastList.removeChild(toast);
-      }, 1000);
+      }, 2000);
     }
   };
   //oder
@@ -1212,7 +1212,7 @@ const waitGetRoomInfo = async () => {
           };
           let removeToast = setTimeout(() => {
             toastList.removeChild(toast);
-          }, 1000);
+          }, 2000);
         }
       } else {
         e.preventDefault();
@@ -1234,7 +1234,7 @@ const waitGetRoomInfo = async () => {
         };
         let removeToast = setTimeout(() => {
           toastList.removeChild(toast);
-        }, 1000);
+        }, 2000);
       }
     };
   } else {
@@ -1280,7 +1280,7 @@ const waitGetRoomInfo = async () => {
 
           setTimeout(() => {
             toastList.removeChild(toast);
-          }, 1000);
+          }, 2000);
           closeToast.onclick = () => {
             toastList.removeChild(toast);
             clearTimeout();
@@ -1306,7 +1306,7 @@ const waitGetRoomInfo = async () => {
         };
         let removeToast = setTimeout(() => {
           toastList.removeChild(toast);
-        }, 1000);
+        }, 2000);
       }
     };
   }

@@ -90,32 +90,53 @@ let popUp = document.querySelector(".pop-up");
 let popUpOverLay = document.querySelector(".pop-up-overlay");
 btnSignUp.onclick = (e) => {
   e.preventDefault();
-  if (
-    !inputEmail.parentElement.classList.contains("error") &&
-    !inputPass.parentElement.parentElement.classList.contains("error") &&
-    !inputPassAgain.parentElement.parentElement.classList.contains("error")
-  ) {
-    let valueEmail = inputEmail.value;
-    let valuePass = inputPass.value;
+  if (inputEmail.value != "" && inputPass.value != "" && inputPassAgain!="") {
+    if (
+      !inputEmail.parentElement.classList.contains("error") &&
+      !inputPass.parentElement.parentElement.classList.contains("error") &&
+      !inputPassAgain.parentElement.parentElement.classList.contains("error")
+    ) {
+      let valueEmail = inputEmail.value;
+      let valuePass = inputPass.value;
 
-    let result = {
-      email: valueEmail,
-      pass: valuePass,
-      name: `Người dùng ${Math.floor(Math.random() * 10000)}`,
+      let result = {
+        email: valueEmail,
+        pass: valuePass,
+        name: `Người dùng ${Math.floor(Math.random() * 10000)}`,
+      };
+      user.push(result);
+      localStorage.setItem("user", JSON.stringify(user));
+      inputEmail.value = "";
+      inputPass.value = "";
+      inputPassAgain.value = "";
+      setTimeout(() => {
+        popUp.classList.add("active");
+        popUpOverLay.classList.add("active");
+      }, 500);
+      setTimeout(() => {
+        popUp.classList.remove("active");
+        popUpOverLay.classList.remove("active");
+      }, 1500);
+    }
+  }else{
+    let toastError = document.createElement("div");
+    toastError.classList.add("toast-error", "active");
+    toastError.innerHTML = `<div class="toast-error-icon">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </div>
+        <div class="toast-error-content">Vui lòng điền đủ thông tin</div>
+        <div class="toast-error-close" onclick= >
+          <ion-icon name="close-outline"></ion-icon>
+        </div>`;
+    toastList.appendChild(toastError);
+    let btnCloseError = document.querySelector(".toast-error-close");
+    btnCloseError.onclick = () => {
+      toastList.removeChild(toastError);
+      clearTimeout(closeError);
     };
-    user.push(result);
-    localStorage.setItem("user", JSON.stringify(user));
-    inputEmail.value = "";
-    inputPass.value = "";
-    inputPassAgain.value = "";
-    setTimeout(() => {
-      popUp.classList.add("active");
-      popUpOverLay.classList.add("active");
-    }, 500);
-    setTimeout(() => {
-      popUp.classList.remove("active");
-      popUpOverLay.classList.remove("active");
-    }, 1500);
+    let closeError = setTimeout(() => {
+      toastList.removeChild(toastError);
+    }, 2000);
   }
 };
 

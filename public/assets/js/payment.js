@@ -552,7 +552,7 @@ btnPay.onclick = () => {
     };
     let delay = setTimeout(() => {
       toastList.removeChild(toast);
-    }, 1000);
+    }, 2000);
   } else {
     if (!inputAll.checked && !inputHalf.checked) {
       let toast = document.createElement("div");
@@ -572,7 +572,7 @@ btnPay.onclick = () => {
       };
       let delay = setTimeout(() => {
         toastList.removeChild(toast);
-      }, 1000);
+      }, 2000);
     } else {
       if (inputCard.value == "123456") {
         setTimeout(() => {
@@ -607,7 +607,7 @@ btnPay.onclick = () => {
 
         let delay = setTimeout(() => {
           toastList.removeChild(toast);
-        }, 1000);
+        }, 2000);
         closeToast.onclick = () => {
           toastList.removeChild(toast);
           clearTimeout(delay);

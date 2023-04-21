@@ -227,8 +227,27 @@ button {
   align-items: center;
   position: relative;
   height: 80px;
+  overflow: hidden;
   transform: translateX(150%);
   transition: all 0.3s ease;
+}
+.toast-error::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: rgb(210, 35, 6);
+  animation: timeDelete 3s linear 1 forwards;
+}
+@keyframes timeDelete {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-150%);
+  }
 }
 .toast-error.active {
   transform: translateX(0);
@@ -257,7 +276,6 @@ button {
 }
 
 @media (max-width: 1023px) {
-  
 }
 @media (max-width: 767px) {
   .signup-content {
