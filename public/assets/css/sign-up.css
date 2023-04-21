@@ -44,7 +44,6 @@ label {
   margin-bottom: 40px;
   width: auto;
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -86,7 +85,6 @@ label {
   border-color: red;
 }
 .signup-form span {
-  margin-left: 50px;
   font-weight: 500;
   color: red;
 }
@@ -217,15 +215,15 @@ button {
 
 .toast-error {
   width: 300px;
-   border: 1px solid rgb(210, 35, 6);
+  border: 1px solid rgb(210, 35, 6);
   border-radius: 5px;
   border-left: 20px solid rgb(210, 35, 6);
   background-color: white;
   display: flex;
-    padding: 20px;
+  padding: 20px;
   padding-left: 0;
   padding-right: 30px;
-  gap:5px;
+  gap: 5px;
   align-items: center;
   position: relative;
   height: 80px;
@@ -259,9 +257,13 @@ button {
 }
 
 @media (max-width: 1023px) {
+  
 }
 @media (max-width: 767px) {
+  .signup-content {
+    width: 400px;
+  }
   input {
-    width: 395px;
+    width: 100%;
   }
 }

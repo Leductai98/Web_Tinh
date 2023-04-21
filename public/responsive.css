@@ -266,6 +266,8 @@
     display: none;
   }
   .booking__banner--sign-up {
+    top: 30px;
+    position: relative;
     justify-content: center;
   }
   .footer__content--left {
@@ -324,9 +326,8 @@ span.flatpickr-weekday {
   color: white;
 }
 
-
-@media (max-width:480px){
-  .guest-menu{
+@media (max-width: 480px) {
+  .guest-menu {
     left: -150px;
   }
 }

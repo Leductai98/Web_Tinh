@@ -512,13 +512,16 @@ let toastList = document.querySelector(".pop-up-list");
 let success = document.querySelector(".success-wrap");
 let succesOverlay = document.querySelector(".payment-success-overlay");
 btnPay.onclick = () => {
-  if (!inputAll.checked && !inputHalf.checked) {
+  if (
+    Date.parse(inputStartEnd.value.split(" ")[0]) <
+    Date.parse(new Date().toLocaleDateString())
+  ) {
     let toast = document.createElement("div");
     toast.classList.add("pop-up", "active");
     toast.innerHTML = `<div class="toast-icon">
           <ion-icon name="close-circle-outline"></ion-icon>
         </div>
-        <div class="toast-content">Vui lòng chọn cách thanh toán</div>
+        <div class="toast-content">Ngày nhận phòng không phù hợp</div>
         <div class="toast-close">
           <ion-icon name="close-outline"></ion-icon>
         </div>`;
@@ -532,44 +535,65 @@ btnPay.onclick = () => {
       toastList.removeChild(toast);
     }, 1000);
   } else {
-    if (inputCard.value == "123456") {
-      setTimeout(() => {
-        success.classList.add("active");
-        succesOverlay.classList.add("active");
-      }, 500);
-      let paymentItem = {
-        user: userName,
-        picture: pictureLink,
-        name: roomName,
-        status: roomStatus,
-        location: roomLocation,
-        date: time,
-        price: priceInfo,
-        way: payWay,
-        link: roomInfo.infoLink,
-      };
-      paymentInfo.push(paymentItem);
-      localStorage.setItem("payment", JSON.stringify(paymentInfo));
-    } else {
+    if (!inputAll.checked && !inputHalf.checked) {
       let toast = document.createElement("div");
       toast.classList.add("pop-up", "active");
       toast.innerHTML = `<div class="toast-icon">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </div>
+        <div class="toast-content">Vui lòng chọn cách thanh toán</div>
+        <div class="toast-close">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>`;
+      toastList.appendChild(toast);
+      let closeToast = document.querySelector(".toast-close");
+      closeToast.onclick = () => {
+        toastList.removeChild(toast);
+        clearTimeout(delay);
+      };
+      let delay = setTimeout(() => {
+        toastList.removeChild(toast);
+      }, 1000);
+    } else {
+      if (inputCard.value == "123456") {
+        setTimeout(() => {
+          success.classList.add("active");
+          succesOverlay.classList.add("active");
+        }, 500);
+        let paymentItem = {
+          user: userName,
+          picture: pictureLink,
+          name: roomName,
+          status: roomStatus,
+          location: roomLocation,
+          date: time,
+          price: priceInfo,
+          way: payWay,
+          link: roomInfo.infoLink,
+        };
+        paymentInfo.push(paymentItem);
+        localStorage.setItem("payment", JSON.stringify(paymentInfo));
+      } else {
+        let toast = document.createElement("div");
+        toast.classList.add("pop-up", "active");
+        toast.innerHTML = `<div class="toast-icon">
           <ion-icon name="close-circle-outline"></ion-icon>
         </div>
         <div class="toast-content">Mã số thẻ sai</div>
         <div class="toast-close">
           <ion-icon name="close-outline"></ion-icon>
         </div>`;
-      toastList.appendChild(toast);
-      let closeToast = document.querySelector(".toast-close");
+        toastList.appendChild(toast);
+        let closeToast = document.querySelector(".toast-close");
 
-      let delay = setTimeout(() => {
-        toastList.removeChild(toast);
-      }, 1000);
-      closeToast.onclick = () => {
-        toastList.removeChild(toast);
-        clearTimeout(delay);
-      };
+        let delay = setTimeout(() => {
+          toastList.removeChild(toast);
+        }, 1000);
+        closeToast.onclick = () => {
+          toastList.removeChild(toast);
+          clearTimeout(delay);
+        };
+      }
     }
   }
 };

@@ -310,7 +310,7 @@ Array.from(increaseBtnMobile).forEach((item) => {
     for (let i = 0; i < quantityMobile.length; i++) {
       if (item.dataset.type == quantityMobile[i].dataset.type) {
         let max = quantityMobile[i].dataset.max;
-        console.log(max);
+
         let text = quantityMobile[i].innerHTML;
         let count = Number(text);
         let adultNumberOne =
@@ -485,16 +485,19 @@ Array.from(reduceBtnMobile).forEach((item) => {
 
 //image-background-slider
 let slider = 0;
+let imageSlider = document.querySelectorAll(".image-slider");
+
 setInterval(function () {
-  let imageSlider = document.querySelectorAll(".image-slider");
-  let lengthImageSlider = imageSlider.length;
-  Array.from(imageSlider).forEach((item) => {
-    item.classList.remove("active");
-  });
-  imageSlider[slider].classList.add("active");
-  slider++;
-  if (slider >= lengthImageSlider) {
-    slider = 0;
+  if (imageSlider) {
+    let lengthImageSlider = imageSlider.length;
+    Array.from(imageSlider).forEach((item) => {
+      item.classList.remove("active");
+    });
+    imageSlider[slider].classList.add("active");
+    slider++;
+    if (slider >= lengthImageSlider) {
+      slider = 0;
+    }
   }
 }, 10000);
 
@@ -784,8 +787,13 @@ const urlImage = `https://api-git-main-leductai98.vercel.app`;
 let numberRoomRender = 12;
 let btnMoreRoom = document.querySelector(".btn__moreroom");
 btnMoreRoom.onclick = () => {
-  numberRoomRender += 4;
-  getRoomInfoSearch(urlRoom);
+  if (window.innerWidth > 1023) {
+    numberRoomRender += 4;
+    getRoomInfoSearch(urlRoom);
+  } else {
+    numberRoomRender += 4;
+    getRoomInfoSearchMobile(urlRoom);
+  }
 };
 let roomList = document.querySelector(".booking__room--list .row");
 const urlRoom = `https://api-sandy-zeta.vercel.app/room-list`;
@@ -828,6 +836,7 @@ const renderRoom = (data) => {
   } else {
     for (let i = 0; i < numberRoomRender; i++) {
       let item = data[i];
+
       htmlPicture = renderRoomPicture(item.picture);
       htmlCode += `<div class="booking__room--list--item col l-3 m-6 c-12">
             <div class="booking__room-list-picture">
@@ -1128,47 +1137,43 @@ const getRoomInfoSearch = async (API) => {
   ) {
     result5 = result4;
   } else {
-    for (let i = 1; i < 9; i++) {
-      if (sleepRoomCount[i].checked) {
-        result4.forEach((item) => {
-          if (parseInt(item.room[0]) >= i) {
-            result5.push(item);
+    result4.forEach((item, index) => {
+      result5 = result4;
+      for (let i = 1; i < 9; i++) {
+        if (sleepRoomCount[i].checked) {
+          if (parseInt(item.room[0]) < i) {
+            result5.splice(index, 1, " ");
           }
-        });
+        }
       }
-    }
-    for (let i = 10; i < 18; i++) {
-      if (sleepRoomCount[i].checked) {
-        result4.forEach((item) => {
-          if (parseInt(item.room[0]) >= i - 9) {
-            if (!result5.includes(item)) {
-              result5.push(item);
-            }
+      for (let i = 10; i < 18; i++) {
+        if (sleepRoomCount[i].checked) {
+          if (parseInt(item.room[1]) < i - 9) {
+            result5.splice(index, 1, " ");
           }
-        });
+        }
       }
-    }
-    for (let i = 19; i < 27; i++) {
-      if (sleepRoomCount[i].checked) {
-        result4.forEach((item) => {
-          if (parseInt(item.room[0]) >= i - 18) {
-            if (!result5.includes(item)) {
-              result5.push(item);
-            }
+      for (let i = 19; i < 27; i++) {
+        if (sleepRoomCount[i].checked) {
+          if (parseInt(item.room[2]) < i - 18) {
+            result5.splice(index, 1, " ");
           }
-        });
+        }
       }
-    }
+    });
   }
+  let newResult5 = result5.filter((item) => {
+    return item != " ";
+  });
   let result6 = [];
-  result5.forEach((item) => {
+  newResult5.forEach((item) => {
     if (
       !homeType.checked &&
       !apartmentType.checked &&
       !guestRoomType.checked &&
       !hotelType.checked
     ) {
-      result6 = result5;
+      result6 = newResult5;
     } else {
       if (homeType.checked) {
         if (item.house == "Nhà") {
@@ -1193,7 +1198,7 @@ const getRoomInfoSearch = async (API) => {
     }
   });
   let result7 = [];
-  result6.forEach((item) => {
+  result6.forEach((item, index) => {
     let n = 0;
     thingsList.forEach((item1) => {
       if (!item1.checked) {
@@ -1203,65 +1208,81 @@ const getRoomInfoSearch = async (API) => {
     if (n == 6) {
       result7 = result6;
     } else {
+      result7 = result6;
       if (thingsList[0].checked) {
-        item.utinity.forEach((item2) => {
+        let x = false;
+        item.utinity.map((item2) => {
           if (item2.name == "Wi-fi") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[1].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Bếp") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[2].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Máy giặt") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[3].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Máy sấy quần áo") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[4].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Điều hòa nhiệt độ") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[5].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Hệ thống sưởi") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
     }
   });
-  if (result7.length > 12) {
-    if (numberRoomRender >= result7.length) {
-      numberRoomRender = result7.length;
+  let result8 = result7.filter((item3) => {
+    return item3 != " ";
+  });
+  if (result8.length > 12) {
+    if (numberRoomRender >= result8.length) {
+      numberRoomRender = result8.length;
       btnMoreRoom.style.display = "none";
     } else {
       if (numberRoomRender < 12) {
@@ -1270,10 +1291,11 @@ const getRoomInfoSearch = async (API) => {
       btnMoreRoom.style.display = "flex";
     }
   } else {
-    numberRoomRender = result7.length;
+    numberRoomRender = result8.length;
     btnMoreRoom.style.display = "none";
   }
-  renderRoom(result7);
+
+  renderRoom(result8);
 };
 
 btnSearch.onclick = () => {
@@ -1370,47 +1392,43 @@ const getRoomInfoSearchMobile = async (API) => {
   ) {
     result5 = result4;
   } else {
-    for (let i = 1; i < 9; i++) {
-      if (sleepRoomCount[i].checked) {
-        result4.forEach((item) => {
-          if (parseInt(item.room[0]) >= i) {
-            result5.push(item);
+    result4.forEach((item, index) => {
+      result5 = result4;
+      for (let i = 1; i < 9; i++) {
+        if (sleepRoomCount[i].checked) {
+          if (parseInt(item.room[0]) < i) {
+            result5.splice(index, 1, " ");
           }
-        });
+        }
       }
-    }
-    for (let i = 10; i < 18; i++) {
-      if (sleepRoomCount[i].checked) {
-        result4.forEach((item) => {
-          if (parseInt(item.room[0]) >= i - 9) {
-            if (!result5.includes(item)) {
-              result5.push(item);
-            }
+      for (let i = 10; i < 18; i++) {
+        if (sleepRoomCount[i].checked) {
+          if (parseInt(item.room[1]) < i - 9) {
+            result5.splice(index, 1, " ");
           }
-        });
+        }
       }
-    }
-    for (let i = 19; i < 27; i++) {
-      if (sleepRoomCount[i].checked) {
-        result4.forEach((item) => {
-          if (parseInt(item.room[0]) >= i - 18) {
-            if (!result5.includes(item)) {
-              result5.push(item);
-            }
+      for (let i = 19; i < 27; i++) {
+        if (sleepRoomCount[i].checked) {
+          if (parseInt(item.room[2]) < i - 18) {
+            result5.splice(index, 1, " ");
           }
-        });
+        }
       }
-    }
+    });
   }
+  let newResult5 = result5.filter((item) => {
+    return item != " ";
+  });
   let result6 = [];
-  result5.forEach((item) => {
+  newResult5.forEach((item) => {
     if (
       !homeType.checked &&
       !apartmentType.checked &&
       !guestRoomType.checked &&
       !hotelType.checked
     ) {
-      result6 = result5;
+      result6 = newResult5;
     } else {
       if (homeType.checked) {
         if (item.house == "Nhà") {
@@ -1435,7 +1453,7 @@ const getRoomInfoSearchMobile = async (API) => {
     }
   });
   let result7 = [];
-  result6.forEach((item) => {
+  result6.forEach((item, index) => {
     let n = 0;
     thingsList.forEach((item1) => {
       if (!item1.checked) {
@@ -1445,77 +1463,94 @@ const getRoomInfoSearchMobile = async (API) => {
     if (n == 6) {
       result7 = result6;
     } else {
+      result7 = result6;
       if (thingsList[0].checked) {
-        item.utinity.forEach((item2) => {
+        let x = false;
+        item.utinity.map((item2) => {
           if (item2.name == "Wi-fi") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[1].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Bếp") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[2].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Máy giặt") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[3].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Máy sấy quần áo") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[4].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Điều hòa nhiệt độ") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
       if (thingsList[5].checked) {
+        let x = false;
         item.utinity.forEach((item2) => {
           if (item2.name == "Hệ thống sưởi") {
-            if (!result7.includes(item)) {
-              result7.push(item);
-            }
+            x = true;
           }
         });
+        if (x == false) {
+          result7.splice(index, 1, " ");
+        }
       }
     }
   });
-  if (result7.length > 8) {
-    if (numberRoomRender >= result7.length) {
-      numberRoomRender = result7.length;
+  let result8 = result7.filter((item3) => {
+    return item3 != " ";
+  });
+  if (result8.length > 12) {
+    if (numberRoomRender >= result8.length) {
+      numberRoomRender = result8.length;
       btnMoreRoom.style.display = "none";
     } else {
-      if (numberRoomRender < 8) {
-        numberRoomRender = 8;
+      if (numberRoomRender < 12) {
+        numberRoomRender = 12;
       }
       btnMoreRoom.style.display = "flex";
     }
   } else {
-    numberRoomRender = result7.length;
+    numberRoomRender = result8.length;
     btnMoreRoom.style.display = "none";
   }
-  renderRoom(result2);
+
+  renderRoom(result8);
 };
 
 btnSearchMobile.onclick = () => {

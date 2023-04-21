@@ -1146,7 +1146,7 @@ const waitGetRoomInfo = async () => {
       if (userLogin.length != 0) {
         if (dayIn.value != "" && dayOut.value != "") {
           let x = new Date();
-          if (Date.parse(dayIn.value) < Date.parse(x)) {
+          if (Date.parse(dayIn.value) < Date.parse(x.toLocaleDateString())) {
             e.preventDefault();
             let toastList = document.querySelector(".pop-up-list");
 
