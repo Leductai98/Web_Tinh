@@ -774,12 +774,14 @@ flatpickr("#start", {
   allowInput: true,
   plugins: [new rangePlugin({ input: "#end" })],
   minDate: "today",
+  dateFormat: "d-m-Y",
 });
 
 flatpickr("#input-start-end", {
   allowInput: true,
   mode: "range",
   minDate: "today",
+  dateFormat: "d-m-Y",
 });
 
 const urlFilter = `https://api-sandy-zeta.vercel.app/filter`;
@@ -789,11 +791,10 @@ const urlImage = `https://api-git-main-leductai98.vercel.app`;
 let numberRoomRender = 12;
 let btnMoreRoom = document.querySelector(".btn__moreroom");
 btnMoreRoom.onclick = () => {
-  if (window.innerWidth > 1023) {
-    numberRoomRender += 4;
+  numberRoomRender += 4;
+  if (window.innerWidth >= 1024) {
     getRoomInfoSearch(urlRoom);
   } else {
-    numberRoomRender += 4;
     getRoomInfoSearchMobile(urlRoom);
   }
 };
@@ -937,10 +938,12 @@ const waitFilter = async () => {
     breakpoints: {
       0: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 20,
       },
       768: {
         slidesPerView: 5,
+        slidesPerGroup: 5,
         spaceBetween: 40,
       },
       1024: {
@@ -992,7 +995,11 @@ const waitFilter = async () => {
         item2.classList.remove("active");
       });
       item1.classList.add("active");
-      getRoomInfoSearch(urlRoom);
+      if (window.innerWidth >= 1024) {
+        getRoomInfoSearch(urlRoom);
+      } else {
+        getRoomInfoSearchMobile(urlRoom);
+      }
     };
   });
 };
@@ -1062,12 +1069,18 @@ const getRoomInfoSearch = async (API) => {
       }
     }
     if (inputDayStart.value != "") {
-      if (Date.parse(result[i].start) > Date.parse(inputDayStart.value)) {
+      if (
+        Date.parse(result[i].start) >
+        Date.parse(inputDayStart.value.split("-").reverse().join("-"))
+      ) {
         result.splice(i, 1, "");
       }
     }
     if (inputDayEnd.value != "") {
-      if (Date.parse(result[i].end) < Date.parse(inputDayEnd.value)) {
+      if (
+        Date.parse(result[i].end) <
+        Date.parse(inputDayEnd.value.split("-").reverse().join("-"))
+      ) {
         result.splice(i, 1, "");
       }
     }
@@ -1307,8 +1320,20 @@ btnSearch.onclick = () => {
 const getRoomInfoSearchMobile = async (API) => {
   const res = await axios.get(API);
   const data = res.data;
-  let dayStartMobile = inputStartEnd.value.split(" ")[0];
-  let dayEndMobile = inputStartEnd.value.split(" ")[2];
+  let dayStartMobile = ``;
+  let dayEndMobile = ``;
+  if (inputStartEnd.value.split(" ").length == 3) {
+    dayStartMobile = inputStartEnd.value
+      .split(" ")[0]
+      .split("-")
+      .reverse()
+      .join("-");
+    dayEndMobile = inputStartEnd.value
+      .split(" ")[2]
+      .split("-")
+      .reverse()
+      .join("-");
+  }
   let result = data;
   for (let i = 0; i < data.length; i++) {
     if (inputLocationMobile.value != "") {
@@ -1559,7 +1584,7 @@ btnSearchMobile.onclick = () => {
   getRoomInfoSearchMobile(urlRoom);
 };
 
-if (window.innerWidth < 768) {
+if (window.innerWidth < 1023) {
   bookingFilterBtn.onclick = () => {
     getRoomInfoSearchMobile(urlRoom);
   };

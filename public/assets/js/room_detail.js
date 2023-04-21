@@ -687,24 +687,30 @@ const waitGetRoomInfo = async () => {
     allowInput: true,
     inline: true,
     showMonths: 2,
+    dateFormat: "d-m-Y",
     minDate:
-      Date.parse(validDayStart) >= Date.parse(today) ? validDayStart : today,
+      Date.parse(validDayStart) >= Date.parse(today)
+        ? validDayStart.split("-").reverse().join("-")
+        : today.split("-").reverse().join("-"),
     enable: [
       {
-        from: validDayStart,
-        to: validDayEnd,
+        from: validDayStart.split("-").reverse().join("-"),
+        to: validDayEnd.split("-").reverse().join("-"),
       },
     ],
   });
   flatpickr("#in", {
     allowInput: true,
     allowInvalidPreload: true,
+    dateFormat: "d-m-Y",
     minDate:
-      Date.parse(validDayStart) >= Date.parse(today) ? validDayStart : today,
+      Date.parse(validDayStart) >= Date.parse(today)
+        ? validDayStart.split("-").reverse().join("-")
+        : today.split("-").reverse().join("-"),
     enable: [
       {
-        from: validDayStart,
-        to: validDayEnd,
+        from: validDayStart.split("-").reverse().join("-"),
+        to: validDayEnd.split("-").reverse().join("-"),
       },
     ],
     plugins: [new rangePlugin({ input: "#out" })],
@@ -1055,8 +1061,8 @@ const waitGetRoomInfo = async () => {
     totalDay();
   };
   const totalDay = () => {
-    let resultIn = dayIn.value;
-    let resultOut = dayOut.value;
+    let resultIn = dayIn.value.split("-").reverse().join("-");
+    let resultOut = dayOut.value.split("-").reverse().join("-");
     let textIn = Date.parse(resultIn);
     let textOut = Date.parse(resultOut);
     let minus = textOut - textIn;

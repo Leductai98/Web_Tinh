@@ -911,6 +911,7 @@ body {
   text-transform: uppercase;
 }
 #in {
+  text-align: center;
   display: block;
   border: none;
   outline: none;
@@ -936,6 +937,7 @@ body {
   text-transform: uppercase;
 }
 #out {
+  text-align: center;
   display: block;
   border: none;
   outline: none;

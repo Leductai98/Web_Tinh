@@ -120,14 +120,15 @@ flatpickr("#date", {
   mode: "range",
   allowInput: true,
   showMonths: 1,
+  dateFormat: "d-m-Y",
   minDate:
     Date.parse(roomInfo.validDayStart) >= Date.parse(today)
-      ? roomInfo.validDayStart
-      : today,
+      ? roomInfo.validDayStart.split("-").reverse().join("-")
+      : today.split("-").reverse().join("-"),
   enable: [
     {
-      from: roomInfo.validDayStart,
-      to: roomInfo.validDayEnd,
+      from: roomInfo.validDayStart.split("-").reverse().join("-"),
+      to: roomInfo.validDayEnd.split("-").reverse().join("-"),
     },
   ],
 });
@@ -442,25 +443,35 @@ const waitGetRoomInfo = async () => {
   let halfCostDes = document.querySelectorAll(".half-item-des");
 
   const totalPrice = () => {
-    let dayIn = inputText.innerHTML.split(" ")[0];
-    let dayOut = inputText.innerHTML.split(" ")[2];
-    let count =
-      (Number(Date.parse(dayOut)) - Number(Date.parse(dayIn))) /
-      (1000 * 3600 * 24);
-    countNight.innerHTML = count + " " + "dêm";
-    let total = count * roomInfo.infoPrice;
-    priceList[0].innerHTML = `đ ${total.toLocaleString()}`;
-    priceList[2].innerHTML = `đ ${(total * 0.1).toLocaleString()}`;
-    let cost =
-      total +
-      Number(priceList[1].innerHTML.split(" ")[1].split(",").join("")) +
-      Number(priceList[2].innerHTML.split(" ")[1].split(",").join(""));
-    totalCost.innerHTML = `đ ${cost.toLocaleString()}`;
-    priceInfo = `đ ${cost.toLocaleString()}`;
-    halfCost.forEach((item) => {
-      item.innerHTML = `đ ${(cost / 2).toLocaleString()}`;
-    });
-    halfCostDes[1].innerHTML = `Phải trả vào ${dayIn}`;
+    if (inputText.innerHTML.split(" ").length >= 3) {
+      let dayIn = inputText.innerHTML
+        .split(" ")[0]
+        .split("-")
+        .reverse()
+        .join("-");
+      let dayOut = inputText.innerHTML
+        .split(" ")[2]
+        .split("-")
+        .reverse()
+        .join("-");
+      let count =
+        (Number(Date.parse(dayOut)) - Number(Date.parse(dayIn))) /
+        (1000 * 3600 * 24);
+      countNight.innerHTML = count + " " + "dêm";
+      let total = count * roomInfo.infoPrice;
+      priceList[0].innerHTML = `đ ${total.toLocaleString()}`;
+      priceList[2].innerHTML = `đ ${(total * 0.1).toLocaleString()}`;
+      let cost =
+        total +
+        Number(priceList[1].innerHTML.split(" ")[1].split(",").join("")) +
+        Number(priceList[2].innerHTML.split(" ")[1].split(",").join(""));
+      totalCost.innerHTML = `đ ${cost.toLocaleString()}`;
+      priceInfo = `đ ${cost.toLocaleString()}`;
+      halfCost.forEach((item) => {
+        item.innerHTML = `đ ${(cost / 2).toLocaleString()}`;
+      });
+      halfCostDes[1].innerHTML = `Phải trả vào ${dayIn}`;
+    }
   };
   totalPrice();
   inputStartEnd.oninput = () => {
