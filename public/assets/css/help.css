@@ -11,7 +11,9 @@
   box-sizing: border-box;
 }
 
-.footer__content{width: 100%;}
+.footer__content {
+  width: 100%;
+}
 .help__banner {
   height: fit-content;
   background-image: url(../image/help-background.png);
@@ -58,7 +60,7 @@
 
 .question-answer-list {
   background-color: #ccc8c849;
-  padding:20px;
+  padding: 20px;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -69,6 +71,9 @@
   border-radius: 10px;
   padding: 20px;
   font-size: 14px;
+}
+.question-contact-text span {
+  color: white;
 }
 .question-contact-phone {
   margin-top: 20px;
@@ -95,7 +100,6 @@
   width: 80px;
 }
 .question-answer-item {
-  
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -110,7 +114,8 @@
   flex-direction: column;
   gap: 20px;
 }
-.answer-item {background-color: white;
+.answer-item {
+  background-color: white;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 2px 15px #00000038;
