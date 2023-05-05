@@ -790,7 +790,7 @@ body .filter .owl-carousel .owl-stage-outer {
   left: 0;
   right: 0;
   height: 10px;
-background-color: var(--text-color);
+  background-color: var(--text-color);
 
   border-radius: 10px;
 }
@@ -828,7 +828,7 @@ background-color: var(--text-color);
   border-radius: 50%;
   -moz-appearance: none;
   pointer-events: auto;
- background-color: var(--text-color);
+  background-color: var(--text-color);
 }
 .range-max::-moz-slider-thumb {
   height: 20px;
@@ -1647,9 +1647,8 @@ div.guest-pet-mobile.active {
   transform: translateY(0);
 }
 #guest-menu-input-pc:checked ~ .guest-menu-pc {
-  transform: translateY(0);
   z-index: 2;
-  opacity: 1;
+  display: block;
   user-select: unset;
 }
 .header__search--people--des-icon {
@@ -1740,9 +1739,9 @@ div.guest-pet-mobile.active {
   background-color: white;
   border-top: none;
   transition: all 0.3s linear;
-  transform: translateY(-100%);
+
   z-index: -1;
-  opacity: 0;
+  display: none;
   user-select: none;
   transition: all 0.3s linear;
 }
