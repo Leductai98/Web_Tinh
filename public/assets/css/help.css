@@ -426,14 +426,14 @@ span {
 #answer-input-23:checked ~ .answer-item {
   cursor: default;
 }
-#answer-input-14:checked ~ .answer-item .answer-item-left .answer-hide {
+#answer-input-24:checked ~ .answer-item .answer-item-left .answer-hide {
   display: block;
 }
-#answer-input-14:checked ~ .answer-item .answer-item-right .answer-item-icon {
+#answer-input-24:checked ~ .answer-item .answer-item-right .answer-item-icon {
   cursor: pointer;
   transform: rotateZ(180deg);
 }
-#answer-input-14:checked ~ .answer-item {
+#answer-input-24:checked ~ .answer-item {
   cursor: default;
 }
 #answer-input-25:checked ~ .answer-item .answer-item-left .answer-hide {
