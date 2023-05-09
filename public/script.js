@@ -928,9 +928,9 @@ const waitFilter = async () => {
   filterFirstItem.classList.add("active");
 
   var swiper = new Swiper(".filter", {
-    slidesPerView: 6,
-    spaceBetween: 30,
-    slidesPerGroup: 6,
+    slidesPerView: 7,
+    spaceBetween: 0,
+    slidesPerGroup: 7,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -948,7 +948,7 @@ const waitFilter = async () => {
       },
       1024: {
         slidesPerView: 7,
-        spaceBetween: 50,
+        spaceBetween: 0,
       },
     },
   });
