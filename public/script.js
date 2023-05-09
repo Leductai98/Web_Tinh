@@ -936,15 +936,16 @@ const waitFilter = async () => {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      0: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 20,
+      0: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 0 },
+      500: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 0,
       },
       768: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-        spaceBetween: 40,
+        spaceBetween: 0,
       },
       1024: {
         slidesPerView: 7,
