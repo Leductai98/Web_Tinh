@@ -2080,7 +2080,7 @@ const renderRoomInfo = (item) => {
                           </div>
                         </div>
                         <div data-type="night" class="total-item">
-                          ${item.price}
+                          đ ${item.price}
                         </div>
                       </div>
                       <div class="cost-item">
