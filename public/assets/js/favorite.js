@@ -185,13 +185,15 @@ deleteList.forEach((item) => {
   let favoriteList = JSON.parse(localStorage.getItem("favorite"));
   item.onclick = () => {
     for (let i = 0; i < favoriteList.length; i++) {
-      if (
-        item.parentElement.parentElement.parentElement.parentElement.dataset
-          .name == favoriteList[i].name
-      ) {
-        favoriteList.splice(i, 1);
-        console.log(favoriteList);
-        localStorage.setItem("favorite", JSON.stringify(favoriteList));
+      if (userLogin.name == favoriteList[i].user) {
+        if (
+          item.parentElement.parentElement.parentElement.parentElement.dataset
+            .name == favoriteList[i].name
+        ) {
+          favoriteList.splice(i, 1);
+          console.log(favoriteList);
+          localStorage.setItem("favorite", JSON.stringify(favoriteList));
+        }
       }
     }
     renderFavoriteList();
