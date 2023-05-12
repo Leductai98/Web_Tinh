@@ -189,13 +189,14 @@ deleteList.forEach((item) => {
   let paymentList = JSON.parse(localStorage.getItem("payment"));
   item.onclick = () => {
     for (let i = 0; i < paymentList.length; i++) {
-      if (
-        item.parentElement.parentElement.parentElement.parentElement.dataset
-          .name == paymentList[i].name
-      ) {
-        paymentList.splice(i, 1);
-        console.log(paymentList);
-        localStorage.setItem("payment", JSON.stringify(paymentList));
+      if (userLogin.name == paymentList[i].user) {
+        if (
+          item.parentElement.parentElement.parentElement.parentElement.dataset
+            .name == paymentList[i].name
+        ) {
+          paymentList.splice(i, 1);
+          localStorage.setItem("payment", JSON.stringify(paymentList));
+        }
       }
     }
     renderPaymentList();
