@@ -77,7 +77,7 @@ body {
   z-index: -1;
 }
 /*guest-menu*/
-.guest-menu-overlay {
+.content-item .guest-menu-overlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 #guest-menu-input:checked ~ .guest-menu-close {

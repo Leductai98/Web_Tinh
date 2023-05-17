@@ -522,7 +522,7 @@ rangeInput.forEach((item, e) => {
         maxVal = minVal + minLength;
         rangeInput[1].value = maxVal;
       }
-    } else {
+    } 
       let percent =
         ((minVal - 500000) / (rangeInput[0].max - rangeInput[0].min)) * 100;
       let percent2 =
@@ -532,7 +532,7 @@ rangeInput.forEach((item, e) => {
       minNumber.value = minVal;
       progress.style.right = percent2 + "%";
       maxNumber.value = maxVal;
-    }
+    
   };
 });
 minNumber.oninput = () => {
